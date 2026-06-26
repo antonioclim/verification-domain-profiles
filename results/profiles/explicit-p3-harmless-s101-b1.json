@@ -1,0 +1,89 @@
+{
+  "case_id": "explicit-p3-harmless-s101",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:5b569d387de59d6696e0b83b109cf082dfbd1aed49581d2773dd7333eaec95df",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1/4",
+    "challenger_ids": [
+      "noise2",
+      "core1",
+      "noise0",
+      "noise3",
+      "core2"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "equality_multipliers": [
+        "67/109"
+      ],
+      "inequality_multipliers": [
+        "37/109",
+        "61/109",
+        "11/109",
+        "349/763"
+      ],
+      "objective": "67/109",
+      "point": [
+        "0",
+        "60/109",
+        "49/109",
+        "9/109",
+        "67/109"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 7,
+        "minimum": "17/42",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "17/84",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "29/66",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "47/79",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "53/95",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "67/109",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "9/109",
+      "multipliers": [
+        "9/109"
+      ],
+      "weights": [
+        "0",
+        "60/109",
+        "49/109"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "67/109"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

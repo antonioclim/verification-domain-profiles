@@ -1,0 +1,67 @@
+{
+  "case_id": "explicit-p2-repairable-s101",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:87a86d080f9e7c7a21ae94017ecd2f514361e743f328a239d605ae8914e317d3",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "core0",
+      "core1"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        1,
+        5
+      ],
+      "equality_multipliers": [
+        "-1/8"
+      ],
+      "inequality_multipliers": [
+        "1/2",
+        "1/2",
+        "1/4"
+      ],
+      "objective": "-1/8",
+      "point": [
+        "1/2",
+        "1/2",
+        "0",
+        "-1/8"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 3,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 6,
+        "minimum": "-1/8",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 6,
+        "minimum": "-1/4",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 6,
+        "minimum": "-1/8",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    "retained_rows": 2,
+    "value": "-1/8"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

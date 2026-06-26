@@ -1,0 +1,209 @@
+{
+  "case_id": "assignment-n6-p2-s12",
+  "family": "assignment",
+  "instance_digest": "sha256:9434d63ab85230e8c96683d54b29acf5e0def364f201878ba1ed6ffa4856035a",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1449/50368",
+    "challenger_ids": [
+      "perm:2,4,3,1,5,0",
+      "perm:2,4,0,1,5,3",
+      "perm:2,0,3,4,5,1",
+      "perm:2,4,0,5,3,1"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        2,
+        3,
+        7
+      ],
+      "equality_multipliers": [
+        "-21/1076"
+      ],
+      "inequality_multipliers": [
+        "967/1076",
+        "109/1076",
+        "6296/18561"
+      ],
+      "objective": "-21/2152",
+      "point": [
+        "1333311/1693624",
+        "360313/1693624",
+        "1449/50368",
+        "-21/2152"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 5,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -1230,
+          -2431,
+          0,
+          -1507,
+          0,
+          -236
+        ],
+        "constraints": [
+          36
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 25488,
+        "minimum_score": "-191/2832",
+        "objective": [
+          183,
+          173
+        ],
+        "row_potentials": [
+          4854,
+          3928,
+          4665,
+          5077,
+          5207,
+          4926
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -109867,
+          -135110,
+          0,
+          -103630,
+          -134543,
+          -12143
+        ],
+        "constraints": [
+          49
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 1359936,
+        "minimum_score": "-79249/1359936",
+        "objective": [
+          139,
+          262
+        ],
+        "row_potentials": [
+          266700,
+          201921,
+          248828,
+          261479,
+          236921,
+          227164
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -59519803,
+          -141932425,
+          0,
+          -88725297,
+          -50761765,
+          -5077496
+        ],
+        "constraints": [
+          23
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 1360540416,
+        "minimum_score": "-15646991/1360540416",
+        "objective": [
+          153,
+          212
+        ],
+        "row_potentials": [
+          263762466,
+          199822680,
+          281835379,
+          283997463,
+          262223873,
+          262820286
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -23353600,
+          -36285012,
+          0,
+          -18590303,
+          -23814057,
+          -2023447
+        ],
+        "constraints": [
+          27
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 334393152,
+        "minimum_score": "-3813739/167196576",
+        "objective": [
+          141,
+          247
+        ],
+        "row_potentials": [
+          65162622,
+          52549979,
+          68859097,
+          69486403,
+          56829450,
+          62838919
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -8019710,
+          -13639980,
+          0,
+          -8276359,
+          -7433283,
+          -608405
+        ],
+        "constraints": [
+          27
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 121940928,
+        "minimum_score": "-21/2152",
+        "objective": [
+          141,
+          247
+        ],
+        "row_potentials": [
+          23706462,
+          19549273,
+          26139033,
+          26033685,
+          22955912,
+          23850431
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      }
+    ],
+    "parameters": {
+      "budget": "1449/50368",
+      "multipliers": [
+        "1449/50368"
+      ],
+      "weights": [
+        "1333311/1693624",
+        "360313/1693624"
+      ]
+    },
+    "retained_rows": 4,
+    "value": "-21/2152"
+  },
+  "schema": "mmor-profile-record-1.0"
+}
