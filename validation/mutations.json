@@ -1,0 +1,7 @@
+{
+  "incorrectly_accepted": [],
+  "mutations": 24,
+  "rejected": 24,
+  "schema": "mmor-semantic-mutation-validation-1.0",
+  "status": "PASS"
+}

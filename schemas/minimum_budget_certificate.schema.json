@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/mmor/minimum-budget-certificate-1.0.schema.json",
+  "title": "Minimum-budget verification-domain certificate",
+  "$defs": {
+    "rational": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)(?:/[1-9][0-9]*)?$"},
+    "parameters": {
+      "type": "object",
+      "required": ["weights", "multipliers", "budget"],
+      "properties": {
+        "weights": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/rational"}},
+        "multipliers": {"type": "array", "items": {"$ref": "#/$defs/rational"}},
+        "budget": {"$ref": "#/$defs/rational"}
+      },
+      "additionalProperties": false
+    },
+    "master": {
+      "type": "object",
+      "required": ["status", "objective", "point", "active_rows", "inequality_multipliers", "equality_multipliers"],
+      "properties": {
+        "status": {"const": "OPTIMAL"},
+        "objective": {"$ref": "#/$defs/rational"},
+        "point": {"type": "array", "items": {"$ref": "#/$defs/rational"}},
+        "active_rows": {"type": "array", "items": {"type": "integer", "minimum": 0}, "uniqueItems": true},
+        "inequality_multipliers": {"type": "array", "items": {"$ref": "#/$defs/rational"}},
+        "equality_multipliers": {"type": "array", "items": {"$ref": "#/$defs/rational"}}
+      },
+      "additionalProperties": false
+    },
+    "stress": {
+      "type": "object",
+      "required": ["depth", "challenger_ids", "coefficients"],
+      "properties": {
+        "depth": {"$ref": "#/$defs/rational"},
+        "challenger_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "coefficients": {"type": "array", "items": {"$ref": "#/$defs/rational"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["schema", "case_id", "family", "instance_digest", "classification", "result", "protocol_sha256"],
+  "properties": {
+    "schema": {"const": "mmor-minimum-budget-certificate-1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "minLength": 1},
+    "instance_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "classification": {"enum": ["harmless", "repairable", "irreparable"]},
+    "protocol_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "result": {
+      "type": "object",
+      "required": ["status", "oracle_calls", "retained_rows", "challenger_ids", "oracle_proofs"],
+      "properties": {
+        "status": {"enum": ["CERTIFIED_MINIMUM_BUDGET", "STRICTLY_CERTIFIED", "IRREPARABLE_DOMAIN"]},
+        "oracle_calls": {"type": "integer", "minimum": 0},
+        "retained_rows": {"type": "integer", "minimum": 0},
+        "challenger_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "oracle_proofs": {"type": "array", "items": {"type": "object"}},
+        "budget": {"$ref": "#/$defs/rational"},
+        "margin": {"$ref": "#/$defs/rational"},
+        "parameters": {"$ref": "#/$defs/parameters"},
+        "master_certificate": {"$ref": "#/$defs/master"},
+        "stress_witness": {"$ref": "#/$defs/stress"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "IRREPARABLE_DOMAIN"}}},
+          "then": {"required": ["stress_witness"]},
+          "else": {"required": ["budget", "margin", "parameters", "master_certificate"]}
+        }
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

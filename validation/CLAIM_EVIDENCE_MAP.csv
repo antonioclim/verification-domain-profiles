@@ -1,0 +1,14 @@
+claim,evidence,status,limitation
+Exact harmless/repairable/irreparable classification,results/raw/correctness_cases.csv and validation/replay.json,PASS,Finite retained corpus
+Exact minimum budget,84 certificates plus KKT replay,PASS,Explicit finite replay for retained objects
+Exact fixed-budget profile,196 profile records plus KKT replay,PASS,Retained budgets only
+Scale invariance,84 independently rescaled cases,PASS,Positive diagonal rescalings
+Structured oracle correctness,24 structured cases versus complete enumeration,PASS,Assignment and layered paths only
+Finite termination,Maximum 15 calls in correctness corpus and theorem proof,PASS,No polynomial call bound
+Chebyshev exact threshold,36 finite thresholds with tie and failure-above checks,PASS,Finite retained images
+Conservative-bound improvement,Median ratio 16.5 and maximum 193.08,PASS,Empirical values are corpus-specific
+Row economy,Median 0.904% and maximum 5.79% retained,PASS,Correctness corpus only
+Runtime comparison,Numerical scaling median factor 7.10,CONDITIONAL,Not universal and numerical baseline only
+Cross-platform reproducibility,.github/workflows/ci.yml,OPEN,Hosted workflow not yet executed
+Second-machine replication,External replication package to be prepared,OPEN,Requires independent physical machine
+Independent literature review,docs/RELATED_WORK_AND_BENCHMARK_BOUNDARIES.md,OPEN,Requires external subject-matter review

@@ -1,0 +1,22 @@
+{
+  "components": {
+    "checker_imports": "PASS",
+    "distribution": "PASS",
+    "metadata": "PASS",
+    "mutations": "PASS",
+    "replay": "PASS",
+    "retained_evidence": "PASS",
+    "schemas": "PASS",
+    "tests": "PASS",
+    "wheel": "PASS"
+  },
+  "external_boundaries": {
+    "hosted_cross_platform_ci": "CONFIGURED_NOT_ARCHIVED",
+    "independent_physical_machine": "NOT_CLAIMED",
+    "priority_search": "TARGETED_SEARCH_COMPLETED_NOT_EXHAUSTIVE"
+  },
+  "mode": "complete",
+  "schema": "mmor-release-validation-1.0",
+  "software_version": "2.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "certificates": 84,
+  "classification_counts": {
+    "harmless": 28,
+    "irreparable": 28,
+    "repairable": 28
+  },
+  "failures": [],
+  "mode": "complete",
+  "process_boundary_cases": 4,
+  "profiles": 196,
+  "schema": "mmor-standalone-replay-1.0",
+  "status": "PASS"
+}

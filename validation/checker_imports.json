@@ -1,0 +1,15 @@
+{
+  "imports": [
+    "__future__",
+    "argparse",
+    "fractions",
+    "hashlib",
+    "json",
+    "pathlib",
+    "sys",
+    "typing"
+  ],
+  "nonstandard": [],
+  "schema": "mmor-checker-import-boundary-1.0",
+  "status": "PASS"
+}

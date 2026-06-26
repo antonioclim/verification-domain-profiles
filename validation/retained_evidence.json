@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "balanced_classes": true,
+    "budgets": true,
+    "classifications": true,
+    "independent_replication_not_claimed": true,
+    "no_failures": true,
+    "numeric_scaling": true,
+    "profiles": true,
+    "protocol": true,
+    "scale_invariance": true,
+    "software_version": true,
+    "study_status": true
+  },
+  "failures": [],
+  "schema": "mmor-retained-evidence-validation-1.0",
+  "status": "PASS"
+}

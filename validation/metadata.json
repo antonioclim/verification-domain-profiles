@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "citation_version": true,
+    "codemeta_version": true,
+    "email_absent": true,
+    "package_version": true,
+    "protocol_digest": true,
+    "protocol_version": true,
+    "release_identifier_absent": true,
+    "runtime_version": true,
+    "source_licence": true,
+    "zenodo_version": true
+  },
+  "failures": [],
+  "schema": "mmor-metadata-validation-1.0",
+  "status": "PASS"
+}

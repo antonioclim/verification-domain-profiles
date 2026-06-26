@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/mmor/verification-instance-1.0.schema.json",
+  "title": "Finite verification-domain instance",
+  "type": "object",
+  "required": ["schema", "identifier", "family", "candidate_id", "objective_scales", "constraint_scales", "digest", "alternatives", "metadata"],
+  "properties": {
+    "schema": {"const": "mmor-verification-instance-1.0"},
+    "identifier": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "minLength": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "objective_scales": {"type": "array", "minItems": 2, "items": {"type": "integer", "minimum": 1}},
+    "constraint_scales": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "alternatives": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["identifier", "objectives", "constraints", "decision"],
+        "properties": {
+          "identifier": {"type": "string", "minLength": 1},
+          "objectives": {"type": "array", "items": {"type": "integer"}},
+          "constraints": {"type": "array", "items": {"type": "integer"}},
+          "decision": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}

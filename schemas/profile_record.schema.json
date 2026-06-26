@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/mmor/profile-record-1.0.schema.json",
+  "title": "Fixed-budget verification-domain profile record",
+  "$defs": {
+    "rational": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)(?:/[1-9][0-9]*)?$"},
+    "parameters": {
+      "type": "object",
+      "required": ["weights", "multipliers", "budget"],
+      "properties": {
+        "weights": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/rational"}},
+        "multipliers": {"type": "array", "items": {"$ref": "#/$defs/rational"}},
+        "budget": {"$ref": "#/$defs/rational"}
+      },
+      "additionalProperties": false
+    },
+    "master": {
+      "type": "object",
+      "required": ["status", "objective", "point", "active_rows", "inequality_multipliers", "equality_multipliers"],
+      "properties": {
+        "status": {"const": "OPTIMAL"},
+        "objective": {"$ref": "#/$defs/rational"},
+        "point": {"type": "array", "items": {"$ref": "#/$defs/rational"}},
+        "active_rows": {"type": "array", "items": {"type": "integer", "minimum": 0}, "uniqueItems": true},
+        "inequality_multipliers": {"type": "array", "items": {"$ref": "#/$defs/rational"}},
+        "equality_multipliers": {"type": "array", "items": {"$ref": "#/$defs/rational"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["schema", "case_id", "family", "instance_digest", "protocol_sha256", "result"],
+  "properties": {
+    "schema": {"const": "mmor-profile-record-1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "minLength": 1},
+    "instance_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "protocol_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "result": {
+      "type": "object",
+      "required": ["budget", "value", "parameters", "oracle_calls", "retained_rows", "challenger_ids", "oracle_proofs", "master_certificate"],
+      "properties": {
+        "budget": {"$ref": "#/$defs/rational"},
+        "value": {"$ref": "#/$defs/rational"},
+        "parameters": {"$ref": "#/$defs/parameters"},
+        "oracle_calls": {"type": "integer", "minimum": 1},
+        "retained_rows": {"type": "integer", "minimum": 1},
+        "challenger_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "oracle_proofs": {"type": "array", "items": {"type": "object"}},
+        "master_certificate": {"$ref": "#/$defs/master"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

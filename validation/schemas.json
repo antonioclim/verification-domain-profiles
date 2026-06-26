@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "certificates": 84,
+    "instances": 84,
+    "profiles": 196
+  },
+  "failures": [],
+  "schema": "mmor-json-schema-validation-1.0",
+  "status": "PASS"
+}
