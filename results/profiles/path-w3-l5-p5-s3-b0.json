@@ -1,0 +1,391 @@
+{
+  "case_id": "path-w3-l5-p5-s3",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:3a8754086075c42255dfc3963b245626d5f45391af912dcf8bf5e6d2f4918ee5",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "path:e000001|e000006|e000012|e000023|e000038|e000041",
+      "path:e000000|e000003|e000013|e000024|e000030|e000039",
+      "path:e000000|e000003|e000014|e000027|e000030|e000039",
+      "path:e000000|e000003|e000012|e000021|e000030|e000039",
+      "path:e000001|e000007|e000015|e000023|e000038|e000041",
+      "path:e000001|e000007|e000017|e000028|e000033|e000039",
+      "path:e000000|e000003|e000012|e000023|e000038|e000041",
+      "path:e000000|e000004|e000017|e000027|e000030|e000039"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        4,
+        5,
+        7,
+        10,
+        14
+      ],
+      "equality_multipliers": [
+        "1734787/39449973"
+      ],
+      "inequality_multipliers": [
+        "596405/13149991",
+        "6168835/78899946",
+        "17351995/78899946",
+        "25900343/39449973",
+        "805801691/4497296922",
+        "60892660/1459649001"
+      ],
+      "objective": "1734787/39449973",
+      "point": [
+        "3550866/13149991",
+        "6778675/39449973",
+        "0",
+        "1428240/13149991",
+        "17733980/39449973",
+        "0",
+        "1734787/39449973"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 9,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          22
+        ],
+        "distance_to_sink": 91959146,
+        "excluded_subproblems": [],
+        "integer_scale": 96620700,
+        "minimum_score": "-1340783/16103450",
+        "objective": [
+          113,
+          233,
+          140,
+          68,
+          94
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          4
+        ],
+        "distance_to_sink": 89,
+        "excluded_subproblems": [],
+        "integer_scale": 115,
+        "minimum_score": "-58/115",
+        "objective": [
+          197,
+          89,
+          188,
+          219,
+          98
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          17
+        ],
+        "distance_to_sink": 2061,
+        "excluded_subproblems": [],
+        "integer_scale": 3217,
+        "minimum_score": "-144/3217",
+        "objective": [
+          100,
+          123,
+          190,
+          189,
+          184
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          23
+        ],
+        "distance_to_sink": 936708,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 936708
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 936708
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 936708
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 936708
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 959490
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 975151
+          }
+        ],
+        "integer_scale": 1459135,
+        "minimum_score": "41869/1459135",
+        "objective": [
+          99,
+          144,
+          166,
+          233,
+          127
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          10
+        ],
+        "distance_to_sink": 402360957,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 413784860
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 413784860
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 402360957
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 402360957
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 402360957
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 402360957
+          }
+        ],
+        "integer_scale": 522460383,
+        "minimum_score": "7267787/522460383",
+        "objective": [
+          90,
+          162,
+          209,
+          83,
+          155
+        ],
+        "selected_forbidden_edge": "e000017",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -16
+        ],
+        "distance_to_sink": 409197873,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 410077681
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 410077681
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 413569408
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 409197873
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 409197873
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 420398130
+          }
+        ],
+        "integer_scale": 577724201,
+        "minimum_score": "22659391/577724201",
+        "objective": [
+          126,
+          132,
+          245,
+          183,
+          113
+        ],
+        "selected_forbidden_edge": "e000027",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          30
+        ],
+        "distance_to_sink": 13021770,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 13021770
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 13021770
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 13021770
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 13021770
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 13021770
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 13021770
+          }
+        ],
+        "integer_scale": 19861085,
+        "minimum_score": "729808/19861085",
+        "objective": [
+          83,
+          173,
+          161,
+          120,
+          139
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          5
+        ],
+        "distance_to_sink": 80556530,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 80556530
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 80556530
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 82049129
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 82049129
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 82049129
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 82285845
+          }
+        ],
+        "integer_scale": 127812571,
+        "minimum_score": "4706074/127812571",
+        "objective": [
+          102,
+          152,
+          163,
+          166,
+          121
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          5
+        ],
+        "distance_to_sink": 29507485,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 29507485
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 29507485
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 29507485
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 29507485
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 29507485
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 29507485
+          }
+        ],
+        "integer_scale": 39449973,
+        "minimum_score": "1734787/39449973",
+        "objective": [
+          102,
+          152,
+          163,
+          166,
+          121
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "3550866/13149991",
+        "6778675/39449973",
+        "0",
+        "1428240/13149991",
+        "17733980/39449973"
+      ]
+    },
+    "retained_rows": 8,
+    "value": "1734787/39449973"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

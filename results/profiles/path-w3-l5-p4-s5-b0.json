@@ -1,0 +1,171 @@
+{
+  "case_id": "path-w3-l5-p4-s5",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:5a61c235af7eed35300e8ad9c702ed69c6ffaa59c3a4223207d9ba5864e88c3f",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "path:e000001|e000007|e000016|e000024|e000032|e000041",
+      "path:e000001|e000007|e000016|e000025|e000034|e000040",
+      "path:e000001|e000008|e000018|e000021|e000030|e000039",
+      "path:e000001|e000007|e000016|e000024|e000031|e000040",
+      "path:e000001|e000008|e000018|e000021|e000031|e000040"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        1,
+        3,
+        4,
+        6,
+        10
+      ],
+      "equality_multipliers": [
+        "-4674/135829"
+      ],
+      "inequality_multipliers": [
+        "409546/679145",
+        "100043/679145",
+        "169556/679145",
+        "23911343/67914500",
+        "766323/1358290"
+      ],
+      "objective": "-4674/135829",
+      "point": [
+        "69764/135829",
+        "0",
+        "60098/135829",
+        "5967/135829",
+        "0",
+        "-4674/135829"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          35
+        ],
+        "distance_to_sink": 905494141,
+        "excluded_subproblems": [],
+        "integer_scale": 1151888400,
+        "minimum_score": "-166608461/575944200",
+        "objective": [
+          95,
+          121,
+          106,
+          76
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          26
+        ],
+        "distance_to_sink": 63,
+        "excluded_subproblems": [],
+        "integer_scale": 163,
+        "minimum_score": "-16/163",
+        "objective": [
+          63,
+          154,
+          100,
+          125
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          26
+        ],
+        "distance_to_sink": 60,
+        "excluded_subproblems": [],
+        "integer_scale": 151,
+        "minimum_score": "-33/151",
+        "objective": [
+          132,
+          233,
+          60,
+          194
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          29
+        ],
+        "distance_to_sink": 754445,
+        "excluded_subproblems": [],
+        "integer_scale": 1294135,
+        "minimum_score": "-119544/1294135",
+        "objective": [
+          81,
+          148,
+          85,
+          91
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          15
+        ],
+        "distance_to_sink": 830,
+        "excluded_subproblems": [],
+        "integer_scale": 1721,
+        "minimum_score": "-123/1721",
+        "objective": [
+          94,
+          199,
+          60,
+          177
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          15
+        ],
+        "distance_to_sink": 73139,
+        "excluded_subproblems": [],
+        "integer_scale": 135829,
+        "minimum_score": "-4674/135829",
+        "objective": [
+          94,
+          199,
+          60,
+          177
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "69764/135829",
+        "0",
+        "60098/135829",
+        "5967/135829"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "-4674/135829"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

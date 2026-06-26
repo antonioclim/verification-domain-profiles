@@ -1,0 +1,93 @@
+{
+  "case_id": "explicit-p4-harmless-s103",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:4e73a78d508303ee4d77f4d382967cb457e396868c5f34193d83bd516006c05c",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1/4",
+    "challenger_ids": [
+      "core3",
+      "noise1",
+      "core0",
+      "core2",
+      "core1"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        2,
+        3,
+        4,
+        10
+      ],
+      "equality_multipliers": [
+        "24/49"
+      ],
+      "inequality_multipliers": [
+        "2/7",
+        "1/4",
+        "13/28",
+        "0",
+        "3/16"
+      ],
+      "objective": "1683/3136",
+      "point": [
+        "775/4928",
+        "353/4928",
+        "299/616",
+        "2/7",
+        "1/4",
+        "1683/3136"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 8,
+        "minimum": "13/28",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "1/5",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "447/896",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "3013/6272",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "1683/3136",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "1/4",
+      "multipliers": [
+        "1/4"
+      ],
+      "weights": [
+        "775/4928",
+        "353/4928",
+        "299/616",
+        "2/7"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "1683/3136"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

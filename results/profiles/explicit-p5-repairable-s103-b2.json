@@ -1,0 +1,97 @@
+{
+  "case_id": "explicit-p5-repairable-s103",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:8fe7cad1af0a11f0ff519a5ef1780f7c738bf1eaf160dc583d2f515203f86c3e",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "4/31",
+    "challenger_ids": [
+      "core1",
+      "core0",
+      "core2",
+      "core3",
+      "core4"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        11
+      ],
+      "equality_multipliers": [
+        "-1/31"
+      ],
+      "inequality_multipliers": [
+        "5/31",
+        "6/31",
+        "7/31",
+        "7/31",
+        "6/31",
+        "1/4"
+      ],
+      "objective": "0",
+      "point": [
+        "6/31",
+        "5/31",
+        "7/31",
+        "7/31",
+        "6/31",
+        "4/31",
+        "0"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/25",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-25/186",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-24/217",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-24/217",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-25/186",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "0",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "4/31",
+      "multipliers": [
+        "4/31"
+      ],
+      "weights": [
+        "6/31",
+        "5/31",
+        "7/31",
+        "7/31",
+        "6/31"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "0"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

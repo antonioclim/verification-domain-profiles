@@ -1,0 +1,93 @@
+{
+  "case_id": "explicit-p4-harmless-s103",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:4e73a78d508303ee4d77f4d382967cb457e396868c5f34193d83bd516006c05c",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1",
+    "challenger_ids": [
+      "core3",
+      "noise1",
+      "core0",
+      "noise3",
+      "core2"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "equality_multipliers": [
+        "531/931"
+      ],
+      "inequality_multipliers": [
+        "11/133",
+        "4/19",
+        "6/19",
+        "52/133",
+        "9/133"
+      ],
+      "objective": "531/931",
+      "point": [
+        "10/133",
+        "0",
+        "85/133",
+        "2/7",
+        "400/931",
+        "531/931"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 8,
+        "minimum": "13/28",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "1/5",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "11/21",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "225/413",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "531/931",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "400/931",
+      "multipliers": [
+        "400/931"
+      ],
+      "weights": [
+        "10/133",
+        "0",
+        "85/133",
+        "2/7"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "531/931"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

@@ -1,0 +1,97 @@
+{
+  "case_id": "explicit-p5-repairable-s102",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:c0f4cb02b4b757376232958216dc9abd38eca1a521c686b359bfbf6eb68f5ab6",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "core3",
+      "core0",
+      "core1",
+      "core2",
+      "core4"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        11
+      ],
+      "equality_multipliers": [
+        "-1/32"
+      ],
+      "inequality_multipliers": [
+        "1/8",
+        "7/32",
+        "7/32",
+        "7/32",
+        "7/32",
+        "1/2"
+      ],
+      "objective": "-1/32",
+      "point": [
+        "7/32",
+        "7/32",
+        "7/32",
+        "1/8",
+        "7/32",
+        "0",
+        "-1/32"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/20",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/32",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "7/32",
+        "7/32",
+        "7/32",
+        "1/8",
+        "7/32"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "-1/32"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

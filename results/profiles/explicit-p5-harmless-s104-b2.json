@@ -1,0 +1,109 @@
+{
+  "case_id": "explicit-p5-harmless-s104",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:b1eb442381c4181731133ad01e3bd8ea2f063e9a3d099fe461102709572b9776",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1",
+    "challenger_ids": [
+      "core3",
+      "noise0",
+      "core4",
+      "core2",
+      "noise3",
+      "core1",
+      "noise1"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "equality_multipliers": [
+        "5126/9663"
+      ],
+      "inequality_multipliers": [
+        "181/3221",
+        "1682/9663",
+        "2104/9663",
+        "529/9663",
+        "3014/9663",
+        "597/3221"
+      ],
+      "objective": "5126/9663",
+      "point": [
+        "413/9663",
+        "260/3221",
+        "728/3221",
+        "4018/9663",
+        "756/3221",
+        "1348/9663",
+        "5126/9663"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 8,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 9,
+        "minimum": "44/105",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "3/14",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "3/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "515/1149",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "269/548",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "490/969",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "5126/9663",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "1348/9663",
+      "multipliers": [
+        "1348/9663"
+      ],
+      "weights": [
+        "413/9663",
+        "260/3221",
+        "728/3221",
+        "4018/9663",
+        "756/3221"
+      ]
+    },
+    "retained_rows": 7,
+    "value": "5126/9663"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

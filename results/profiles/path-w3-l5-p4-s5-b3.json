@@ -1,0 +1,271 @@
+{
+  "case_id": "path-w3-l5-p4-s5",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:5a61c235af7eed35300e8ad9c702ed69c6ffaa59c3a4223207d9ba5864e88c3f",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "567041/2554410",
+    "challenger_ids": [
+      "path:e000001|e000007|e000016|e000024|e000032|e000041",
+      "path:e000000|e000004|e000017|e000028|e000034|e000040",
+      "path:e000001|e000008|e000018|e000021|e000031|e000040",
+      "path:e000001|e000007|e000016|e000024|e000031|e000040",
+      "path:e000001|e000007|e000016|e000025|e000034|e000040"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        2,
+        3,
+        4,
+        6,
+        10
+      ],
+      "equality_multipliers": [
+        "-4674/135829"
+      ],
+      "inequality_multipliers": [
+        "169556/679145",
+        "100043/679145",
+        "409546/679145",
+        "23911343/67914500",
+        "766323/1358290"
+      ],
+      "objective": "1233723/13582900",
+      "point": [
+        "5340537688537/10408888676700",
+        "0",
+        "26280388504829/72862220736900",
+        "255501900342/2023950576025",
+        "567041/2554410",
+        "1233723/13582900"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          35
+        ],
+        "distance_to_sink": 905494141,
+        "excluded_subproblems": [],
+        "integer_scale": 1151888400,
+        "minimum_score": "-166608461/575944200",
+        "objective": [
+          95,
+          121,
+          106,
+          76
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -3
+        ],
+        "distance_to_sink": 14602192071,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 14602192071
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 14602192071
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 14707749598
+          },
+          {
+            "forbidden_edge": "e000028",
+            "optimum": 14707749598
+          },
+          {
+            "forbidden_edge": "e000034",
+            "optimum": 16916166607
+          },
+          {
+            "forbidden_edge": "e000040",
+            "optimum": 18178884327
+          }
+        ],
+        "integer_scale": 17487490860,
+        "minimum_score": "193666237/5829163620",
+        "objective": [
+          87,
+          273,
+          118,
+          186
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          15
+        ],
+        "distance_to_sink": 1082756005391,
+        "excluded_subproblems": [],
+        "integer_scale": 1166834052720,
+        "minimum_score": "-36235827389/291708513180",
+        "objective": [
+          94,
+          199,
+          60,
+          177
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          29
+        ],
+        "distance_to_sink": 65772438724089,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 71100505252818
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 68403104243614
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 65772438724089
+          },
+          {
+            "forbidden_edge": "e000028",
+            "optimum": 65772438724089
+          },
+          {
+            "forbidden_edge": "e000034",
+            "optimum": 65772438724089
+          },
+          {
+            "forbidden_edge": "e000040",
+            "optimum": 70735040330799
+          }
+        ],
+        "integer_scale": 62879545586340,
+        "minimum_score": "3761794870321/62879545586340",
+        "objective": [
+          81,
+          148,
+          85,
+          91
+        ],
+        "selected_forbidden_edge": "e000017",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          26
+        ],
+        "distance_to_sink": 97684505444184,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 105262294071969
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 100938872182053
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 97684505444184
+          },
+          {
+            "forbidden_edge": "e000028",
+            "optimum": 97684505444184
+          },
+          {
+            "forbidden_edge": "e000034",
+            "optimum": 105262294071969
+          },
+          {
+            "forbidden_edge": "e000040",
+            "optimum": 109286883245337
+          }
+        ],
+        "integer_scale": 99235931799060,
+        "minimum_score": "308477987143/9923593179906",
+        "objective": [
+          63,
+          154,
+          100,
+          125
+        ],
+        "selected_forbidden_edge": "e000017",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          15
+        ],
+        "distance_to_sink": 74799029510629,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 77063734308374
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 74799029510629
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 74799029510629
+          },
+          {
+            "forbidden_edge": "e000028",
+            "optimum": 74799029510629
+          },
+          {
+            "forbidden_edge": "e000034",
+            "optimum": 74799029510629
+          },
+          {
+            "forbidden_edge": "e000040",
+            "optimum": 78537702910813
+          }
+        ],
+        "integer_scale": 72862220736900,
+        "minimum_score": "1233723/13582900",
+        "objective": [
+          94,
+          199,
+          60,
+          177
+        ],
+        "selected_forbidden_edge": "e000007",
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "567041/2554410",
+      "multipliers": [
+        "567041/2554410"
+      ],
+      "weights": [
+        "5340537688537/10408888676700",
+        "0",
+        "26280388504829/72862220736900",
+        "255501900342/2023950576025"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "1233723/13582900"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

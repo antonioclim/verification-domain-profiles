@@ -1,0 +1,271 @@
+{
+  "case_id": "path-w3-l5-p5-s3",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:3a8754086075c42255dfc3963b245626d5f45391af912dcf8bf5e6d2f4918ee5",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1",
+    "challenger_ids": [
+      "path:e000001|e000006|e000012|e000023|e000038|e000041",
+      "path:e000002|e000010|e000017|e000028|e000033|e000039",
+      "path:e000000|e000003|e000013|e000024|e000030|e000039",
+      "path:e000000|e000003|e000012|e000021|e000030|e000039",
+      "path:e000001|e000007|e000015|e000023|e000038|e000041",
+      "path:e000001|e000007|e000017|e000028|e000033|e000039",
+      "path:e000000|e000004|e000017|e000027|e000030|e000039"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "equality_multipliers": [
+        "46586/955939"
+      ],
+      "inequality_multipliers": [
+        "23842/955939",
+        "103084/955939",
+        "271449/955939",
+        "557564/955939",
+        "3044633/109932985",
+        "6636146/54488523"
+      ],
+      "objective": "46586/955939",
+      "point": [
+        "564207/955939",
+        "0",
+        "0",
+        "53097/955939",
+        "338635/955939",
+        "436193/3823756",
+        "46586/955939"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 8,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          22
+        ],
+        "distance_to_sink": 91959146,
+        "excluded_subproblems": [],
+        "integer_scale": 96620700,
+        "minimum_score": "-1340783/16103450",
+        "objective": [
+          113,
+          233,
+          140,
+          68,
+          94
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -32
+        ],
+        "distance_to_sink": 8178,
+        "excluded_subproblems": [],
+        "integer_scale": 4255,
+        "minimum_score": "-4161/4255",
+        "objective": [
+          140,
+          134,
+          248,
+          212,
+          191
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          4
+        ],
+        "distance_to_sink": 18335,
+        "excluded_subproblems": [],
+        "integer_scale": 32935,
+        "minimum_score": "-6913/32935",
+        "objective": [
+          197,
+          89,
+          188,
+          219,
+          98
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          23
+        ],
+        "distance_to_sink": 255312,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 255312
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 255312
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 255312
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 255312
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 261074
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 261074
+          }
+        ],
+        "integer_scale": 385561,
+        "minimum_score": "5025/385561",
+        "objective": [
+          99,
+          144,
+          166,
+          233,
+          127
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          10
+        ],
+        "distance_to_sink": 23209604,
+        "excluded_subproblems": [],
+        "integer_scale": 27380238,
+        "minimum_score": "-868921/9126746",
+        "objective": [
+          90,
+          162,
+          209,
+          83,
+          155
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -16
+        ],
+        "distance_to_sink": 9941147481,
+        "excluded_subproblems": [],
+        "integer_scale": 12481389137,
+        "minimum_score": "-189777017/12481389137",
+        "objective": [
+          126,
+          132,
+          245,
+          183,
+          113
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          5
+        ],
+        "distance_to_sink": 488067227,
+        "excluded_subproblems": [],
+        "integer_scale": 437560318,
+        "minimum_score": "-4466188/218780159",
+        "objective": [
+          102,
+          152,
+          163,
+          166,
+          121
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          5
+        ],
+        "distance_to_sink": 2923632,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 2923632
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 2923632
+          },
+          {
+            "forbidden_edge": "e000017",
+            "optimum": 2923632
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 2923632
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 2923632
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 2923632
+          }
+        ],
+        "integer_scale": 3823756,
+        "minimum_score": "46586/955939",
+        "objective": [
+          102,
+          152,
+          163,
+          166,
+          121
+        ],
+        "selected_forbidden_edge": "e000001",
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "436193/3823756",
+      "multipliers": [
+        "436193/3823756"
+      ],
+      "weights": [
+        "564207/955939",
+        "0",
+        "0",
+        "53097/955939",
+        "338635/955939"
+      ]
+    },
+    "retained_rows": 7,
+    "value": "46586/955939"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

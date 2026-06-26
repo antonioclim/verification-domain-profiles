@@ -1,0 +1,97 @@
+{
+  "case_id": "explicit-p5-harmless-s104",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:b1eb442381c4181731133ad01e3bd8ea2f063e9a3d099fe461102709572b9776",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "core3",
+      "noise0",
+      "noise3",
+      "core2",
+      "core4"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        11
+      ],
+      "equality_multipliers": [
+        "419/839"
+      ],
+      "inequality_multipliers": [
+        "355/2517",
+        "184/2517",
+        "282/839",
+        "581/2517",
+        "551/2517",
+        "2479/10068"
+      ],
+      "objective": "419/839",
+      "point": [
+        "203/839",
+        "42/839",
+        "174/839",
+        "322/839",
+        "98/839",
+        "0",
+        "419/839"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 9,
+        "minimum": "44/105",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "17/63",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "82/217",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "242/501",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "419/839",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "203/839",
+        "42/839",
+        "174/839",
+        "322/839",
+        "98/839"
+      ]
+    },
+    "retained_rows": 5,
+    "value": "419/839"
+  },
+  "schema": "mmor-profile-record-1.0"
+}

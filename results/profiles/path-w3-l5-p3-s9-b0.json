@@ -1,0 +1,143 @@
+{
+  "case_id": "path-w3-l5-p3-s9",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:45a00821f538d7ce61389f9514073e2ea46ed1b2e8a8ded11a03d07a319c8aa8",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "path:e000000|e000005|e000019|e000024|e000032|e000041",
+      "path:e000002|e000010|e000017|e000028|e000033|e000039",
+      "path:e000002|e000010|e000016|e000024|e000032|e000041",
+      "path:e000002|e000010|e000016|e000024|e000030|e000039"
+    ],
+    "master_certificate": {
+      "active_rows": [
+        2,
+        3,
+        6,
+        8
+      ],
+      "equality_multipliers": [
+        "-9/6464"
+      ],
+      "inequality_multipliers": [
+        "6381/6464",
+        "83/6464",
+        "189339/607616",
+        "15055/42016"
+      ],
+      "objective": "-9/6464",
+      "point": [
+        "4565/6464",
+        "1899/6464",
+        "0",
+        "0",
+        "-9/6464"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 5,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          13
+        ],
+        "distance_to_sink": 4208775,
+        "excluded_subproblems": [],
+        "integer_scale": 4938666,
+        "minimum_score": "-720439/4938666",
+        "objective": [
+          131,
+          135,
+          106
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -15
+        ],
+        "distance_to_sink": 82,
+        "excluded_subproblems": [],
+        "integer_scale": 166,
+        "minimum_score": "-11/83",
+        "objective": [
+          82,
+          197,
+          205
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          14
+        ],
+        "distance_to_sink": 12181,
+        "excluded_subproblems": [],
+        "integer_scale": 20631,
+        "minimum_score": "-49/20631",
+        "objective": [
+          104,
+          117,
+          140
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          12
+        ],
+        "distance_to_sink": 5332,
+        "excluded_subproblems": [],
+        "integer_scale": 8961,
+        "minimum_score": "-42/2987",
+        "objective": [
+          86,
+          172,
+          185
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          12
+        ],
+        "distance_to_sink": 7826,
+        "excluded_subproblems": [],
+        "integer_scale": 12928,
+        "minimum_score": "-9/6464",
+        "objective": [
+          86,
+          172,
+          185
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "4565/6464",
+        "1899/6464",
+        "0"
+      ]
+    },
+    "retained_rows": 4,
+    "value": "-9/6464"
+  },
+  "schema": "mmor-profile-record-1.0"
+}
