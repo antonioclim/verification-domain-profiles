@@ -1,6 +1,6 @@
 # Verification-domain certificate profiles
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXXX.svg)] ([https://doi.org/10.5281/zenodo.XXXXXXXX](https://doi.org/10.5281/zenodo.20915544))
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20915544.svg)] ([https://doi.org/10.5281/zenodo.XXXXXXXX](https://doi.org/10.5281/zenodo.20915544))
 
 This repository provides the validated computational implementation of a theory of
 positive scalarisation certificates over finite verification domains. For a
