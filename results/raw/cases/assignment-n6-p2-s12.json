@@ -1,0 +1,53 @@
+{
+  "alternatives": 720,
+  "budget_agreement": true,
+  "case_id": "assignment-n6-p2-s12",
+  "chebyshev": {
+    "conservative_upper": "6/163",
+    "failure_above_upper": null,
+    "ratio": null,
+    "strict_gap_at_test_rho": "47",
+    "tie_at_upper": null,
+    "upper": null
+  },
+  "classification_agreement": true,
+  "domain_fraction_inspected": 0.005563282336578581,
+  "expected_class": "repairable",
+  "explicit_budget": "1449/25184",
+  "explicit_oracle_calls": 5,
+  "explicit_status": "CERTIFIED_MINIMUM_BUDGET",
+  "explicit_time_ns": 53111398,
+  "family": "assignment",
+  "full_budget": "1449/25184",
+  "full_status": "CERTIFIED_MINIMUM_BUDGET",
+  "full_time_ns": 21418464,
+  "grid_baseline": {
+    "10": {
+      "exact_hit": false,
+      "first_grid_budget": "1/10",
+      "overestimate": "5347/125920"
+    },
+    "100": {
+      "exact_hit": false,
+      "first_grid_budget": "3/50",
+      "overestimate": "1551/629600"
+    },
+    "1000": {
+      "exact_hit": false,
+      "first_grid_budget": "29/500",
+      "overestimate": "1459/3148000"
+    }
+  },
+  "instance_digest": "sha256:9434d63ab85230e8c96683d54b29acf5e0def364f201878ba1ed6ffa4856035a",
+  "m": 1,
+  "observed_class": "repairable",
+  "p": 2,
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "scale_invariant": true,
+  "structured_budget": "1449/25184",
+  "structured_margin": "0",
+  "structured_oracle_calls": 5,
+  "structured_rows": 4,
+  "structured_status": "CERTIFIED_MINIMUM_BUDGET",
+  "structured_time_ns": 7138456
+}

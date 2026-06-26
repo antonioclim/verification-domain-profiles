@@ -1,0 +1,53 @@
+{
+  "alternatives": 243,
+  "budget_agreement": true,
+  "case_id": "path-w3-l5-p5-s5",
+  "chebyshev": {
+    "conservative_upper": "1/635",
+    "failure_above_upper": true,
+    "ratio": "4445/184",
+    "strict_gap_at_test_rho": "1331/1840",
+    "tie_at_upper": true,
+    "upper": "7/184"
+  },
+  "classification_agreement": true,
+  "domain_fraction_inspected": 0.05785123966942149,
+  "expected_class": "repairable",
+  "explicit_budget": "1411683/22054237",
+  "explicit_oracle_calls": 15,
+  "explicit_status": "CERTIFIED_MINIMUM_BUDGET",
+  "explicit_time_ns": 109649177,
+  "family": "layered_shortest_path",
+  "full_budget": "1411683/22054237",
+  "full_status": "CERTIFIED_MINIMUM_BUDGET",
+  "full_time_ns": 13991247,
+  "grid_baseline": {
+    "10": {
+      "exact_hit": false,
+      "first_grid_budget": "1/10",
+      "overestimate": "7937407/220542370"
+    },
+    "100": {
+      "exact_hit": false,
+      "first_grid_budget": "7/100",
+      "overestimate": "13211359/2205423700"
+    },
+    "1000": {
+      "exact_hit": false,
+      "first_grid_budget": "13/200",
+      "overestimate": "4368481/4410847400"
+    }
+  },
+  "instance_digest": "sha256:c413923a2a1eb7833caaf7d1ccc64a2c8034fc274171541e5e3e21cb5d7fc50d",
+  "m": 1,
+  "observed_class": "repairable",
+  "p": 5,
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "scale_invariant": true,
+  "structured_budget": "1411683/22054237",
+  "structured_margin": "0",
+  "structured_oracle_calls": 15,
+  "structured_rows": 14,
+  "structured_status": "CERTIFIED_MINIMUM_BUDGET",
+  "structured_time_ns": 53236140
+}

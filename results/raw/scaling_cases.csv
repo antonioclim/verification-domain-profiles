@@ -1,0 +1,13 @@
+case_id,family,p,domain_size,class,budget,oracle_calls,retained_rows,fraction_inspected,instance_generation_ns,structured_solve_ns
+assignment-n8-p2-s31,assignment,2,40320,harmless,0,2,1,2.48015873015873e-05,166797634,3420717
+assignment-n8-p3-s32,assignment,3,40320,repairable,704/143419,4,3,7.440476190476191e-05,148558754,7956893
+assignment-n8-p4-s33,assignment,4,40320,irreparable,,5,5,0.0001240079365079365,174448044,16661709
+assignment-n8-p5-s34,assignment,5,40320,harmless,0,6,5,0.0001240079365079365,199867714,16730638
+path-w3-l9-p2-s41,layered_shortest_path,2,19683,harmless,0,2,1,5.080526342529086e-05,60313126,4144299
+path-w3-l9-p3-s42,layered_shortest_path,3,19683,harmless,0,4,3,0.00015241579027587258,66208143,7825204
+path-w3-l9-p4-s43,layered_shortest_path,4,19683,irreparable,,5,5,0.0002540263171264543,90607172,15917079
+path-w3-l9-p5-s44,layered_shortest_path,5,19683,harmless,0,4,3,0.00015241579027587258,93534680,10003446
+path-w3-l11-p2-s51,layered_shortest_path,2,177147,harmless,0,3,2,1.1290058538953524e-05,611018179,6374420
+path-w3-l11-p3-s52,layered_shortest_path,3,177147,repairable,3696/38911,6,5,2.822514634738381e-05,797656454,16057618
+path-w3-l11-p4-s53,layered_shortest_path,4,177147,harmless,0,3,2,1.1290058538953524e-05,842955491,7581210
+path-w3-l11-p5-s54,layered_shortest_path,5,177147,irreparable,,7,7,3.951520488633734e-05,958454994,26031067

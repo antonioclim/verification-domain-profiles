@@ -1,0 +1,53 @@
+{
+  "alternatives": 10,
+  "budget_agreement": true,
+  "case_id": "explicit-p5-repairable-s101",
+  "chebyshev": {
+    "conservative_upper": "7/22",
+    "failure_above_upper": null,
+    "ratio": null,
+    "strict_gap_at_test_rho": "22",
+    "tie_at_upper": null,
+    "upper": null
+  },
+  "classification_agreement": true,
+  "domain_fraction_inspected": 0.5555555555555556,
+  "expected_class": "repairable",
+  "explicit_budget": "2/27",
+  "explicit_oracle_calls": 6,
+  "explicit_status": "CERTIFIED_MINIMUM_BUDGET",
+  "explicit_time_ns": 9619373,
+  "family": "explicit",
+  "full_budget": "2/27",
+  "full_status": "CERTIFIED_MINIMUM_BUDGET",
+  "full_time_ns": 3257809,
+  "grid_baseline": {
+    "10": {
+      "exact_hit": false,
+      "first_grid_budget": "1/10",
+      "overestimate": "7/270"
+    },
+    "100": {
+      "exact_hit": false,
+      "first_grid_budget": "2/25",
+      "overestimate": "4/675"
+    },
+    "1000": {
+      "exact_hit": false,
+      "first_grid_budget": "3/40",
+      "overestimate": "1/1080"
+    }
+  },
+  "instance_digest": "sha256:4cf622cf3b54e6150b176e7379ecfaf57465fb60973b586af3d7718c79340c50",
+  "m": 1,
+  "observed_class": "repairable",
+  "p": 5,
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "scale_invariant": true,
+  "structured_budget": "2/27",
+  "structured_margin": "0",
+  "structured_oracle_calls": 6,
+  "structured_rows": 5,
+  "structured_status": "CERTIFIED_MINIMUM_BUDGET",
+  "structured_time_ns": 10162477
+}
