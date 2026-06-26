@@ -1,0 +1,111 @@
+{
+  "alternatives": [
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "candidate"
+      },
+      "identifier": "candidate",
+      "objectives": [
+        0,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core0",
+      "objectives": [
+        1,
+        -2
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core1",
+      "objectives": [
+        -2,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        4
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise0",
+      "objectives": [
+        2,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        3
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise1",
+      "objectives": [
+        4,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise2",
+      "objectives": [
+        1,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        -2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise3",
+      "objectives": [
+        4,
+        3
+      ]
+    }
+  ],
+  "candidate_id": "candidate",
+  "constraint_scales": [
+    4
+  ],
+  "digest": "sha256:ba8be018e3ae299c01171aab940dd44b4bc9322a72bc31272c083f63cd7a7c5a",
+  "family": "explicit_controlled",
+  "identifier": "explicit-p2-irreparable-s101",
+  "metadata": {
+    "seed": 101,
+    "target_class": "irreparable"
+  },
+  "objective_scales": [
+    4,
+    4
+  ],
+  "schema": "mmor-verification-instance-1.0"
+}

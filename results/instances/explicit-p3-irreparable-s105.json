@@ -1,0 +1,133 @@
+{
+  "alternatives": [
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "candidate"
+      },
+      "identifier": "candidate",
+      "objectives": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core0",
+      "objectives": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core1",
+      "objectives": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "constraints": [
+        -2
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core2",
+      "objectives": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise0",
+      "objectives": [
+        1,
+        7,
+        7
+      ]
+    },
+    {
+      "constraints": [
+        3
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise1",
+      "objectives": [
+        7,
+        7,
+        2
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise2",
+      "objectives": [
+        7,
+        2,
+        2
+      ]
+    },
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise3",
+      "objectives": [
+        6,
+        7,
+        7
+      ]
+    }
+  ],
+  "candidate_id": "candidate",
+  "constraint_scales": [
+    3
+  ],
+  "digest": "sha256:12c7bf49f79d39a6759bb254cca1ae5ac02bb77c80dc97114003cb260345ffd0",
+  "family": "explicit_controlled",
+  "identifier": "explicit-p3-irreparable-s105",
+  "metadata": {
+    "seed": 105,
+    "target_class": "irreparable"
+  },
+  "objective_scales": [
+    7,
+    7,
+    7
+  ],
+  "schema": "mmor-verification-instance-1.0"
+}

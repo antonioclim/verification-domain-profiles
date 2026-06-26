@@ -1,0 +1,183 @@
+{
+  "alternatives": [
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "candidate"
+      },
+      "identifier": "candidate",
+      "objectives": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core0",
+      "objectives": [
+        6,
+        2,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        3
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core1",
+      "objectives": [
+        3,
+        7,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core2",
+      "objectives": [
+        4,
+        4,
+        6,
+        2,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core3",
+      "objectives": [
+        3,
+        3,
+        3,
+        5,
+        3
+      ]
+    },
+    {
+      "constraints": [
+        3
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core4",
+      "objectives": [
+        1,
+        2,
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise0",
+      "objectives": [
+        7,
+        3,
+        4,
+        7,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        3
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise1",
+      "objectives": [
+        6,
+        3,
+        6,
+        2,
+        3
+      ]
+    },
+    {
+      "constraints": [
+        4
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise2",
+      "objectives": [
+        5,
+        2,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "constraints": [
+        -2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise3",
+      "objectives": [
+        3,
+        6,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "candidate_id": "candidate",
+  "constraint_scales": [
+    4
+  ],
+  "digest": "sha256:e9e7d9dc95d95921768f0fedc6a0da41ca997f72f242978b6eb04f1edb11a254",
+  "family": "explicit_controlled",
+  "identifier": "explicit-p5-harmless-s103",
+  "metadata": {
+    "seed": 103,
+    "target_class": "harmless"
+  },
+  "objective_scales": [
+    7,
+    7,
+    6,
+    7,
+    5
+  ],
+  "schema": "mmor-verification-instance-1.0"
+}

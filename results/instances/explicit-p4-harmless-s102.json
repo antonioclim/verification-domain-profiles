@@ -1,0 +1,157 @@
+{
+  "alternatives": [
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "candidate"
+      },
+      "identifier": "candidate",
+      "objectives": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        3
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core0",
+      "objectives": [
+        7,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core1",
+      "objectives": [
+        4,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        2
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core2",
+      "objectives": [
+        2,
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core3",
+      "objectives": [
+        4,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise0",
+      "objectives": [
+        7,
+        3,
+        6,
+        3
+      ]
+    },
+    {
+      "constraints": [
+        -2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise1",
+      "objectives": [
+        2,
+        2,
+        7,
+        6
+      ]
+    },
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise2",
+      "objectives": [
+        3,
+        2,
+        5,
+        5
+      ]
+    },
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise3",
+      "objectives": [
+        7,
+        3,
+        5,
+        2
+      ]
+    }
+  ],
+  "candidate_id": "candidate",
+  "constraint_scales": [
+    3
+  ],
+  "digest": "sha256:af571da4723e78f623925ef857170b67d6ed4212b5e22b24e22df10960d52629",
+  "family": "explicit_controlled",
+  "identifier": "explicit-p4-harmless-s102",
+  "metadata": {
+    "seed": 102,
+    "target_class": "harmless"
+  },
+  "objective_scales": [
+    7,
+    5,
+    7,
+    6
+  ],
+  "schema": "mmor-verification-instance-1.0"
+}

@@ -1,0 +1,111 @@
+{
+  "alternatives": [
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "candidate"
+      },
+      "identifier": "candidate",
+      "objectives": [
+        0,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core0",
+      "objectives": [
+        -1,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core1",
+      "objectives": [
+        0,
+        -1
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise0",
+      "objectives": [
+        6,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise1",
+      "objectives": [
+        7,
+        5
+      ]
+    },
+    {
+      "constraints": [
+        2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise2",
+      "objectives": [
+        6,
+        4
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise3",
+      "objectives": [
+        7,
+        6
+      ]
+    }
+  ],
+  "candidate_id": "candidate",
+  "constraint_scales": [
+    2
+  ],
+  "digest": "sha256:36d280f316669853f63641ee75844be65f0e4ede6ec850b878de8573a9537c6d",
+  "family": "explicit_controlled",
+  "identifier": "explicit-p2-repairable-s103",
+  "metadata": {
+    "seed": 103,
+    "target_class": "repairable"
+  },
+  "objective_scales": [
+    7,
+    6
+  ],
+  "schema": "mmor-verification-instance-1.0"
+}

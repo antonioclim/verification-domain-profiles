@@ -1,0 +1,157 @@
+{
+  "alternatives": [
+    {
+      "constraints": [
+        0
+      ],
+      "decision": {
+        "kind": "candidate"
+      },
+      "identifier": "candidate",
+      "objectives": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core0",
+      "objectives": [
+        2,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core1",
+      "objectives": [
+        -1,
+        2,
+        -1,
+        -1
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core2",
+      "objectives": [
+        -1,
+        -1,
+        2,
+        -1
+      ]
+    },
+    {
+      "constraints": [
+        -3
+      ],
+      "decision": {
+        "kind": "core"
+      },
+      "identifier": "core3",
+      "objectives": [
+        -1,
+        -1,
+        -1,
+        2
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise0",
+      "objectives": [
+        6,
+        1,
+        7,
+        7
+      ]
+    },
+    {
+      "constraints": [
+        1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise1",
+      "objectives": [
+        4,
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "constraints": [
+        -1
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise2",
+      "objectives": [
+        3,
+        6,
+        3,
+        7
+      ]
+    },
+    {
+      "constraints": [
+        2
+      ],
+      "decision": {
+        "kind": "noise"
+      },
+      "identifier": "noise3",
+      "objectives": [
+        6,
+        3,
+        4,
+        2
+      ]
+    }
+  ],
+  "candidate_id": "candidate",
+  "constraint_scales": [
+    3
+  ],
+  "digest": "sha256:6f176e4b716b7b6df79c2018731d2bc7fb53bd947765adffd22efce9a1d0cb80",
+  "family": "explicit_controlled",
+  "identifier": "explicit-p4-irreparable-s104",
+  "metadata": {
+    "seed": 104,
+    "target_class": "irreparable"
+  },
+  "objective_scales": [
+    6,
+    6,
+    7,
+    7
+  ],
+  "schema": "mmor-verification-instance-1.0"
+}
