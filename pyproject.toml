@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mmor-verification-profiles"
+version = "2.0.0"
+description = "Exact verification-domain profiles and positive scalarisation certificates"
+requires-python = ">=3.11"
+authors = [{name = "Antonio Clim"}]
+license = {text = "BSD-3-Clause"}
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+validation = [
+  "numpy==2.3.5",
+  "scipy==1.17.0",
+  "matplotlib==3.10.8",
+  "jsonschema==4.26.0",
+  "PyYAML==6.0.3"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/antonioclim/cert-pareto"
+Repository = "https://github.com/antonioclim/cert-pareto"
+Issues = "https://github.com/antonioclim/cert-pareto/issues"

@@ -1,0 +1,5 @@
+jsonschema==4.26.0
+matplotlib==3.10.8
+numpy==2.3.5
+PyYAML==6.0.3
+scipy==1.17.0
