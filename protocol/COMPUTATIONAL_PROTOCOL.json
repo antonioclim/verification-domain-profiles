@@ -1,0 +1,321 @@
+{
+  "amendments": [
+    {
+      "date": "2026-06-25",
+      "description": "One interpretive-limit label was normalised. No case, parameter, metric, algorithm, baseline or pass criterion changed.",
+      "previous_sha256": "914b7cbaa4ba57cb4a3e39e22e4e651f65cbe8fa782eb6700bee0e993c18d250",
+      "scope": "terminology_only"
+    },
+    {
+      "date": "2026-06-25",
+      "description": "The release version was promoted from 2.0.0rc2 to 2.0.0 and the already implemented scale policy was documented explicitly. No case, seed, algorithm, baseline, metric or pass criterion changed.",
+      "scope": "release_metadata_and_scale_semantics"
+    }
+  ],
+  "baselines": [
+    "complete-domain minimum-budget linear programme",
+    "explicit-domain row generation",
+    "structured-oracle row generation",
+    "fixed denominator budget grids with 10, 100 and 1000 intervals",
+    "complete feasible-image Chebyshev verification"
+  ],
+  "candidate_selection": {
+    "controlled_explicit": "Candidate and alternatives are fixed algebraically before classification.",
+    "prohibited": [
+      "candidate generation by the certificate weights subsequently reported",
+      "finite weight grids as supportability ground truth",
+      "deletion of failed cases after observing results",
+      "floating-point signs without exact reconstruction and replay"
+    ],
+    "structured_correctness": "Sequential epsilon filters followed by lexicographic minimisation; no certificate weight is used."
+  },
+  "correctness_corpus": {
+    "assignment": {
+      "cases": [
+        {
+          "class": "harmless",
+          "p": 2,
+          "seed": 9
+        },
+        {
+          "class": "repairable",
+          "p": 2,
+          "seed": 12
+        },
+        {
+          "class": "irreparable",
+          "p": 2,
+          "seed": 11
+        },
+        {
+          "class": "harmless",
+          "p": 3,
+          "seed": 1
+        },
+        {
+          "class": "repairable",
+          "p": 3,
+          "seed": 5
+        },
+        {
+          "class": "irreparable",
+          "p": 3,
+          "seed": 7
+        },
+        {
+          "class": "harmless",
+          "p": 4,
+          "seed": 9
+        },
+        {
+          "class": "repairable",
+          "p": 4,
+          "seed": 13
+        },
+        {
+          "class": "irreparable",
+          "p": 4,
+          "seed": 12
+        },
+        {
+          "class": "harmless",
+          "p": 5,
+          "seed": 2
+        },
+        {
+          "class": "repairable",
+          "p": 5,
+          "seed": 1
+        },
+        {
+          "class": "irreparable",
+          "p": 5,
+          "seed": 17
+        }
+      ],
+      "size": 6
+    },
+    "explicit": {
+      "classes": [
+        "harmless",
+        "repairable",
+        "irreparable"
+      ],
+      "objectives": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ]
+    },
+    "layered_shortest_path": {
+      "cases": [
+        {
+          "class": "harmless",
+          "p": 2,
+          "seed": 3
+        },
+        {
+          "class": "repairable",
+          "p": 2,
+          "seed": 2
+        },
+        {
+          "class": "irreparable",
+          "p": 2,
+          "seed": 1
+        },
+        {
+          "class": "harmless",
+          "p": 3,
+          "seed": 11
+        },
+        {
+          "class": "repairable",
+          "p": 3,
+          "seed": 9
+        },
+        {
+          "class": "irreparable",
+          "p": 3,
+          "seed": 10
+        },
+        {
+          "class": "harmless",
+          "p": 4,
+          "seed": 1
+        },
+        {
+          "class": "repairable",
+          "p": 4,
+          "seed": 5
+        },
+        {
+          "class": "irreparable",
+          "p": 4,
+          "seed": 3
+        },
+        {
+          "class": "harmless",
+          "p": 5,
+          "seed": 3
+        },
+        {
+          "class": "repairable",
+          "p": 5,
+          "seed": 5
+        },
+        {
+          "class": "irreparable",
+          "p": 5,
+          "seed": 1
+        }
+      ],
+      "internal_layers": 5,
+      "width": 3
+    }
+  },
+  "frozen_on": "2026-06-25",
+  "interpretive_limits": [
+    "No polynomial oracle-call bound is claimed.",
+    "Single-machine timings do not establish portable superiority.",
+    "Independent physical-machine replication is not claimed by this archive.",
+    "The study concerns positive verification-domain certificates, not the negative integral proof objects of the related article.",
+    "The profile is invariant under consistent changes of units but depends on the declared scale policy."
+  ],
+  "pass_criteria": {
+    "budget_agreement": "exact equality whenever the domain is repairable or harmless",
+    "classification_agreement": "100% on the correctness corpus",
+    "mutation_or_failure_retention": "every failure retained; no post-hoc case deletion",
+    "profile_agreement": "exact equality at every retained budget",
+    "scale_invariance": "exact equality after all declared positive rescalings",
+    "structured_oracle_agreement": "exact equality with explicit enumeration"
+  },
+  "profile_budgets": {
+    "harmless": [
+      "0",
+      "1/4",
+      "1"
+    ],
+    "irreparable": [],
+    "repairable": [
+      "0",
+      "B*/2",
+      "B*",
+      "2B*+1/10"
+    ]
+  },
+  "research_questions": [
+    "Does exact minimum-budget row generation agree with complete-domain optimisation?",
+    "Do structured assignment and layered-path oracles reproduce explicit-domain results?",
+    "Are harmless, repairable and irreparable domains distinguished exactly?",
+    "Does fixed-budget row generation recover the exact profile at declared budgets?",
+    "Are the profile and minimum budget invariant under positive rescaling?",
+    "How conservative is the former Chebyshev augmentation bound?",
+    "How many alternatives and oracle calls are needed relative to complete-domain baselines?"
+  ],
+  "scaling_corpus": {
+    "assignment": [
+      {
+        "n": 8,
+        "p": 2,
+        "seed": 31
+      },
+      {
+        "n": 8,
+        "p": 3,
+        "seed": 32
+      },
+      {
+        "n": 8,
+        "p": 4,
+        "seed": 33
+      },
+      {
+        "n": 8,
+        "p": 5,
+        "seed": 34
+      }
+    ],
+    "layered_shortest_path": [
+      {
+        "internal_layers": 9,
+        "p": 2,
+        "seed": 41,
+        "width": 3
+      },
+      {
+        "internal_layers": 9,
+        "p": 3,
+        "seed": 42,
+        "width": 3
+      },
+      {
+        "internal_layers": 9,
+        "p": 4,
+        "seed": 43,
+        "width": 3
+      },
+      {
+        "internal_layers": 9,
+        "p": 5,
+        "seed": 44,
+        "width": 3
+      },
+      {
+        "internal_layers": 11,
+        "p": 2,
+        "seed": 51,
+        "width": 3
+      },
+      {
+        "internal_layers": 11,
+        "p": 3,
+        "seed": 52,
+        "width": 3
+      },
+      {
+        "internal_layers": 11,
+        "p": 4,
+        "seed": 53,
+        "width": 3
+      },
+      {
+        "internal_layers": 11,
+        "p": 5,
+        "seed": 54,
+        "width": 3
+      }
+    ]
+  },
+  "schema": "mmor-verification-profile-study-1.0",
+  "software_version": "2.0.0",
+  "timing": {
+    "cases": [
+      "explicit-p2-repairable-s101",
+      "explicit-p5-repairable-s101",
+      "assignment-n6-p2-s12",
+      "assignment-n6-p5-s1",
+      "path-w3-l5-p2-s2",
+      "path-w3-l5-p5-s5",
+      "assignment-n6-p4-s9",
+      "path-w3-l5-p4-s3"
+    ],
+    "clock": "time.perf_counter_ns",
+    "repetitions": 30,
+    "statistics": [
+      "median",
+      "Q1",
+      "Q3",
+      "IQR"
+    ],
+    "warmups": 3
+  }
+}
