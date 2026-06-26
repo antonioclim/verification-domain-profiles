@@ -1,0 +1,96 @@
+{
+  "case_id": "explicit-p5-repairable-s101",
+  "classification": "repairable",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:4cf622cf3b54e6150b176e7379ecfaf57465fb60973b586af3d7718c79340c50",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "2/27",
+    "challenger_ids": [
+      "core1",
+      "core4",
+      "core0",
+      "core2",
+      "core3"
+    ],
+    "margin": "0",
+    "master_certificate": {
+      "active_rows": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "equality_multipliers": [
+        "-2/27"
+      ],
+      "inequality_multipliers": [
+        "4/27",
+        "14/27",
+        "4/9",
+        "14/27",
+        "10/27"
+      ],
+      "objective": "2/27",
+      "point": [
+        "2/9",
+        "2/27",
+        "7/27",
+        "5/27",
+        "7/27",
+        "2/27"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/10",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/6",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/5",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "0",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "2/27",
+      "multipliers": [
+        "2/27"
+      ],
+      "weights": [
+        "2/9",
+        "2/27",
+        "7/27",
+        "5/27",
+        "7/27"
+      ]
+    },
+    "retained_rows": 5,
+    "status": "CERTIFIED_MINIMUM_BUDGET"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

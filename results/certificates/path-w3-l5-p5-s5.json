@@ -1,0 +1,385 @@
+{
+  "case_id": "path-w3-l5-p5-s5",
+  "classification": "repairable",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:c413923a2a1eb7833caaf7d1ccc64a2c8034fc274171541e5e3e21cb5d7fc50d",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1411683/22054237",
+    "challenger_ids": [
+      "path:e000002|e000010|e000015|e000022|e000035|e000041",
+      "path:e000000|e000003|e000012|e000021|e000031|e000040",
+      "path:e000001|e000006|e000014|e000029|e000036|e000039",
+      "path:e000000|e000005|e000019|e000025|e000033|e000039",
+      "path:e000000|e000004|e000015|e000021|e000031|e000040",
+      "path:e000002|e000009|e000014|e000029|e000036|e000039",
+      "path:e000000|e000004|e000015|e000022|e000035|e000041",
+      "path:e000002|e000009|e000014|e000029|e000037|e000040",
+      "path:e000002|e000009|e000013|e000025|e000035|e000041",
+      "path:e000002|e000010|e000015|e000021|e000031|e000040",
+      "path:e000002|e000009|e000014|e000027|e000031|e000040",
+      "path:e000002|e000011|e000020|e000028|e000034|e000040",
+      "path:e000002|e000011|e000019|e000025|e000035|e000041",
+      "path:e000001|e000007|e000015|e000022|e000035|e000041"
+    ],
+    "margin": "0",
+    "master_certificate": {
+      "active_rows": [
+        8,
+        10,
+        12,
+        13,
+        16
+      ],
+      "equality_multipliers": [
+        "-1411683/22054237"
+      ],
+      "inequality_multipliers": [
+        "27320181/44108474",
+        "938595/711427",
+        "10170615/44108474",
+        "139356/22054237",
+        "1368197817/3925654186"
+      ],
+      "objective": "1411683/22054237",
+      "point": [
+        "794263/2134281",
+        "1714943/44108474",
+        "0",
+        "29036137/132325422",
+        "8150025/22054237",
+        "1411683/22054237"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 15,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          13
+        ],
+        "distance_to_sink": 30810257875,
+        "excluded_subproblems": [],
+        "integer_scale": 23231055900,
+        "minimum_score": "-499361749/4646211180",
+        "objective": [
+          229,
+          176,
+          107,
+          143,
+          95
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          2
+        ],
+        "distance_to_sink": 83,
+        "excluded_subproblems": [],
+        "integer_scale": 102,
+        "minimum_score": "-79/102",
+        "objective": [
+          172,
+          83,
+          222,
+          213,
+          231
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -4
+        ],
+        "distance_to_sink": 9061,
+        "excluded_subproblems": [],
+        "integer_scale": 10871,
+        "minimum_score": "-4699/10871",
+        "objective": [
+          188,
+          233,
+          160,
+          85,
+          198
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          9
+        ],
+        "distance_to_sink": 5307,
+        "excluded_subproblems": [],
+        "integer_scale": 4527,
+        "minimum_score": "-578/1509",
+        "objective": [
+          140,
+          164,
+          109,
+          199,
+          229
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -2
+        ],
+        "distance_to_sink": 838679,
+        "excluded_subproblems": [],
+        "integer_scale": 748656,
+        "minimum_score": "-167737/748656",
+        "objective": [
+          141,
+          100,
+          203,
+          152,
+          217
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          4
+        ],
+        "distance_to_sink": 162788325,
+        "excluded_subproblems": [],
+        "integer_scale": 134069300,
+        "minimum_score": "-7348213/67034650",
+        "objective": [
+          133,
+          217,
+          166,
+          151,
+          179
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          14
+        ],
+        "distance_to_sink": 970876178,
+        "excluded_subproblems": [],
+        "integer_scale": 772686007,
+        "minimum_score": "-70905123/772686007",
+        "objective": [
+          163,
+          183,
+          129,
+          118,
+          175
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          27
+        ],
+        "distance_to_sink": 9493387669,
+        "excluded_subproblems": [],
+        "integer_scale": 7606159002,
+        "minimum_score": "-145988348/1267693167",
+        "objective": [
+          132,
+          150,
+          126,
+          219,
+          164
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          32
+        ],
+        "distance_to_sink": 1074587982,
+        "excluded_subproblems": [],
+        "integer_scale": 858621756,
+        "minimum_score": "-9346697/214655439",
+        "objective": [
+          151,
+          183,
+          137,
+          151,
+          145
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -3
+        ],
+        "distance_to_sink": 29698482,
+        "excluded_subproblems": [],
+        "integer_scale": 23944344,
+        "minimum_score": "-121737/1995362",
+        "objective": [
+          207,
+          93,
+          181,
+          177,
+          137
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          13
+        ],
+        "distance_to_sink": 96583084,
+        "excluded_subproblems": [],
+        "integer_scale": 75130104,
+        "minimum_score": "-1364777/37565052",
+        "objective": [
+          157,
+          143,
+          161,
+          153,
+          153
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -22
+        ],
+        "distance_to_sink": 1204206292,
+        "excluded_subproblems": [],
+        "integer_scale": 1033658670,
+        "minimum_score": "-79212119/516829335",
+        "objective": [
+          198,
+          173,
+          180,
+          287,
+          84
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          22
+        ],
+        "distance_to_sink": 2939336706,
+        "excluded_subproblems": [],
+        "integer_scale": 2270145956,
+        "minimum_score": "-25804372/567536489",
+        "objective": [
+          165,
+          185,
+          124,
+          191,
+          111
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -7
+        ],
+        "distance_to_sink": 530824192,
+        "excluded_subproblems": [],
+        "integer_scale": 408909572,
+        "minimum_score": "-12309343/204454786",
+        "objective": [
+          230,
+          198,
+          119,
+          86,
+          120
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -7
+        ],
+        "distance_to_sink": 360893262,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000002",
+            "optimum": 360893262
+          },
+          {
+            "forbidden_edge": "e000009",
+            "optimum": 360893262
+          },
+          {
+            "forbidden_edge": "e000014",
+            "optimum": 360893262
+          },
+          {
+            "forbidden_edge": "e000027",
+            "optimum": 360893262
+          },
+          {
+            "forbidden_edge": "e000030",
+            "optimum": 360893262
+          },
+          {
+            "forbidden_edge": "e000039",
+            "optimum": 360893262
+          }
+        ],
+        "integer_scale": 264650844,
+        "minimum_score": "0",
+        "objective": [
+          230,
+          198,
+          119,
+          86,
+          120
+        ],
+        "selected_forbidden_edge": "e000002",
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "1411683/22054237",
+      "multipliers": [
+        "1411683/22054237"
+      ],
+      "weights": [
+        "794263/2134281",
+        "1714943/44108474",
+        "0",
+        "29036137/132325422",
+        "8150025/22054237"
+      ]
+    },
+    "retained_rows": 14,
+    "status": "CERTIFIED_MINIMUM_BUDGET"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

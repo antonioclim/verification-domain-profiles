@@ -1,0 +1,45 @@
+{
+  "case_id": "explicit-p2-harmless-s105",
+  "classification": "harmless",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:d0743750796fb9e1af453437192cdf94d4437f01d66eba8d88277094bfeba60e",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [],
+    "margin": "31/70",
+    "master_certificate": {
+      "active_rows": [],
+      "equality_multipliers": [],
+      "inequality_multipliers": [],
+      "objective": "0",
+      "point": [
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 1,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 6,
+        "minimum": "31/70",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    "retained_rows": 0,
+    "status": "STRICTLY_CERTIFIED"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

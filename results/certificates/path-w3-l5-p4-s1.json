@@ -1,0 +1,87 @@
+{
+  "case_id": "path-w3-l5-p4-s1",
+  "classification": "harmless",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:45e909c9dfd8c8afd54f46a00454fc202dea6fae046da516f95489079ba9b849",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [],
+    "margin": "18899/2012800",
+    "master_certificate": {
+      "active_rows": [],
+      "equality_multipliers": [],
+      "inequality_multipliers": [],
+      "objective": "0",
+      "point": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4",
+        "0"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 1,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          5
+        ],
+        "distance_to_sink": 7697316,
+        "excluded_subproblems": [
+          {
+            "forbidden_edge": "e000001",
+            "optimum": 7977574
+          },
+          {
+            "forbidden_edge": "e000007",
+            "optimum": 7977574
+          },
+          {
+            "forbidden_edge": "e000015",
+            "optimum": 7734235
+          },
+          {
+            "forbidden_edge": "e000023",
+            "optimum": 7697316
+          },
+          {
+            "forbidden_edge": "e000037",
+            "optimum": 7697316
+          },
+          {
+            "forbidden_edge": "e000040",
+            "optimum": 7697316
+          }
+        ],
+        "integer_scale": 6038400,
+        "minimum_score": "18899/2012800",
+        "objective": [
+          156,
+          145,
+          152,
+          125
+        ],
+        "selected_forbidden_edge": "e000023",
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    "retained_rows": 0,
+    "status": "STRICTLY_CERTIFIED"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

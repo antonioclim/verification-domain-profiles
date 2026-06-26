@@ -1,0 +1,164 @@
+{
+  "case_id": "assignment-n6-p3-s7",
+  "classification": "irreparable",
+  "family": "assignment",
+  "instance_digest": "sha256:53d796013e5be86483ef5bfe1d3f5ef0d18c30caaa1da442c3b32381623d9fec",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "challenger_ids": [
+      "perm:1,3,5,4,0,2",
+      "perm:3,2,0,4,5,1",
+      "perm:3,4,2,0,5,1",
+      "perm:3,5,2,4,0,1"
+    ],
+    "oracle_calls": 4,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -33689,
+          0,
+          0,
+          -112504,
+          0,
+          0
+        ],
+        "constraints": [
+          -10
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 1307592,
+        "minimum_score": "-19/66",
+        "objective": [
+          206,
+          106,
+          236
+        ],
+        "row_potentials": [
+          263673,
+          339576,
+          240982,
+          281834,
+          268584,
+          122446
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -25,
+          0,
+          0,
+          -10,
+          -19,
+          0
+        ],
+        "constraints": [
+          4
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 312,
+        "minimum_score": "-4/39",
+        "objective": [
+          90,
+          250,
+          313
+        ],
+        "row_potentials": [
+          23,
+          24,
+          30,
+          29,
+          7,
+          31
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -186,
+          0,
+          0,
+          -1072,
+          -519,
+          0
+        ],
+        "constraints": [
+          5
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 11336,
+        "minimum_score": "-771/11336",
+        "objective": [
+          107,
+          282,
+          234
+        ],
+        "row_potentials": [
+          1913,
+          1872,
+          1179,
+          1422,
+          1211,
+          1027
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      },
+      {
+        "candidate_excluded": true,
+        "column_potentials": [
+          -53910,
+          0,
+          0,
+          -129882,
+          -68455,
+          -26634
+        ],
+        "constraints": [
+          -18
+        ],
+        "excluded_subproblems": [],
+        "integer_scale": 1381681,
+        "minimum_score": "-66221/1381681",
+        "objective": [
+          140,
+          174,
+          230
+        ],
+        "row_potentials": [
+          229592,
+          271861,
+          230472,
+          216279,
+          185192,
+          163643
+        ],
+        "selected_forbidden_row": -1,
+        "type": "assignment_integer_hungarian_dual"
+      }
+    ],
+    "retained_rows": 4,
+    "status": "IRREPARABLE_DOMAIN",
+    "stress_witness": {
+      "challenger_ids": [
+        "perm:1,3,5,4,0,2",
+        "perm:3,2,0,4,5,1",
+        "perm:3,4,2,0,5,1",
+        "perm:3,5,2,4,0,1"
+      ],
+      "coefficients": [
+        "0",
+        "863970/3437929",
+        "1192278/3437929",
+        "1381681/3437929"
+      ],
+      "depth": "66221/3437929"
+    }
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

@@ -1,0 +1,106 @@
+{
+  "case_id": "path-w3-l5-p3-s11",
+  "classification": "harmless",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:d0ef583401a5adf4654c36f65013ee686909738292f7c91b9803f4beab78cb86",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "0",
+    "challenger_ids": [
+      "path:e000000|e000005|e000020|e000028|e000033|e000039",
+      "path:e000000|e000005|e000020|e000027|e000031|e000040"
+    ],
+    "margin": "0",
+    "master_certificate": {
+      "active_rows": [
+        1,
+        4,
+        5
+      ],
+      "equality_multipliers": [
+        "0"
+      ],
+      "inequality_multipliers": [
+        "0",
+        "0",
+        "1"
+      ],
+      "objective": "0",
+      "point": [
+        "2324/2603",
+        "279/2603",
+        "0",
+        "0"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 3,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          16
+        ],
+        "distance_to_sink": 972332,
+        "excluded_subproblems": [],
+        "integer_scale": 1250478,
+        "minimum_score": "-10945/69471",
+        "objective": [
+          88,
+          137,
+          82
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          6
+        ],
+        "distance_to_sink": 53,
+        "excluded_subproblems": [],
+        "integer_scale": 249,
+        "minimum_score": "-3/83",
+        "objective": [
+          53,
+          198,
+          144
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          6
+        ],
+        "distance_to_sink": 3266,
+        "excluded_subproblems": [],
+        "integer_scale": 7809,
+        "minimum_score": "0",
+        "objective": [
+          53,
+          198,
+          144
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "0",
+      "multipliers": [
+        "0"
+      ],
+      "weights": [
+        "2324/2603",
+        "279/2603",
+        "0"
+      ]
+    },
+    "retained_rows": 2,
+    "status": "CERTIFIED_MINIMUM_BUDGET"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

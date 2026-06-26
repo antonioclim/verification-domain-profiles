@@ -1,0 +1,56 @@
+{
+  "case_id": "explicit-p4-irreparable-s102",
+  "classification": "irreparable",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:adc7b9725288e0389bd4469570354dc3cd07611e463362c04e0ebaa66a5a0602",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "challenger_ids": [
+      "core1",
+      "core0",
+      "core2",
+      "core3"
+    ],
+    "oracle_calls": 4,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 8,
+        "minimum": "-47/840",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "-3/20",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 8,
+        "minimum": "-1/6",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "retained_rows": 4,
+    "status": "IRREPARABLE_DOMAIN",
+    "stress_witness": {
+      "challenger_ids": [
+        "core1",
+        "core0",
+        "core2",
+        "core3"
+      ],
+      "coefficients": [
+        "1/4",
+        "11/42",
+        "5/21",
+        "1/4"
+      ],
+      "depth": "1/28"
+    }
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

@@ -1,0 +1,100 @@
+{
+  "case_id": "path-w3-l5-p2-s1",
+  "classification": "irreparable",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:315a3ca4bae5ec6e3de11daf662a83d05c426c33888eed887b7b53270e1580dd",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "challenger_ids": [
+      "path:e000001|e000007|e000015|e000023|e000038|e000041",
+      "path:e000000|e000004|e000015|e000021|e000031|e000040",
+      "path:e000000|e000004|e000015|e000023|e000038|e000041",
+      "path:e000000|e000005|e000019|e000025|e000035|e000041"
+    ],
+    "oracle_calls": 4,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          23
+        ],
+        "distance_to_sink": 35933,
+        "excluded_subproblems": [],
+        "integer_scale": 36624,
+        "minimum_score": "-2721/12208",
+        "objective": [
+          137,
+          125
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          11
+        ],
+        "distance_to_sink": 95,
+        "excluded_subproblems": [],
+        "integer_scale": 168,
+        "minimum_score": "-3/56",
+        "objective": [
+          95,
+          249
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          21
+        ],
+        "distance_to_sink": 759,
+        "excluded_subproblems": [],
+        "integer_scale": 1117,
+        "minimum_score": "-60/1117",
+        "objective": [
+          101,
+          153
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -20
+        ],
+        "distance_to_sink": 18620,
+        "excluded_subproblems": [],
+        "integer_scale": 23761,
+        "minimum_score": "-582/23761",
+        "objective": [
+          106,
+          199
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "retained_rows": 4,
+    "status": "IRREPARABLE_DOMAIN",
+    "stress_witness": {
+      "challenger_ids": [
+        "path:e000001|e000007|e000015|e000023|e000038|e000041",
+        "path:e000000|e000004|e000015|e000021|e000031|e000040",
+        "path:e000000|e000004|e000015|e000023|e000038|e000041",
+        "path:e000000|e000005|e000019|e000025|e000035|e000041"
+      ],
+      "coefficients": [
+        "0",
+        "62523/308116",
+        "103027/308116",
+        "71283/154058"
+      ],
+      "depth": "873/77029"
+    }
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

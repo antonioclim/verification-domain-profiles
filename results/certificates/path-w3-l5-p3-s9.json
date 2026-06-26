@@ -1,0 +1,160 @@
+{
+  "case_id": "path-w3-l5-p3-s9",
+  "classification": "repairable",
+  "family": "layered_shortest_path",
+  "instance_digest": "sha256:45a00821f538d7ce61389f9514073e2ea46ed1b2e8a8ded11a03d07a319c8aa8",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "117/30110",
+    "challenger_ids": [
+      "path:e000000|e000005|e000019|e000024|e000032|e000041",
+      "path:e000001|e000008|e000019|e000024|e000032|e000041",
+      "path:e000002|e000010|e000016|e000024|e000032|e000041",
+      "path:e000002|e000010|e000017|e000028|e000033|e000039",
+      "path:e000001|e000006|e000013|e000024|e000030|e000039"
+    ],
+    "margin": "0",
+    "master_certificate": {
+      "active_rows": [
+        2,
+        4,
+        7
+      ],
+      "equality_multipliers": [
+        "-117/30110"
+      ],
+      "inequality_multipliers": [
+        "42016/15055",
+        "1079/30110",
+        "2461407/2830340"
+      ],
+      "objective": "117/30110",
+      "point": [
+        "10624/15055",
+        "4431/15055",
+        "0",
+        "117/30110"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 6,
+    "oracle_proofs": [
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          13
+        ],
+        "distance_to_sink": 4208775,
+        "excluded_subproblems": [],
+        "integer_scale": 4938666,
+        "minimum_score": "-720439/4938666",
+        "objective": [
+          131,
+          135,
+          106
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          24
+        ],
+        "distance_to_sink": 75,
+        "excluded_subproblems": [],
+        "integer_scale": 211,
+        "minimum_score": "-43/211",
+        "objective": [
+          139,
+          75,
+          172
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          14
+        ],
+        "distance_to_sink": 10436,
+        "excluded_subproblems": [],
+        "integer_scale": 13162,
+        "minimum_score": "-405/6581",
+        "objective": [
+          104,
+          117,
+          140
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -15
+        ],
+        "distance_to_sink": 82,
+        "excluded_subproblems": [],
+        "integer_scale": 166,
+        "minimum_score": "-11/83",
+        "objective": [
+          82,
+          197,
+          205
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -2
+        ],
+        "distance_to_sink": 148518,
+        "excluded_subproblems": [],
+        "integer_scale": 246094,
+        "minimum_score": "-1371/123047",
+        "objective": [
+          86,
+          173,
+          215
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      },
+      {
+        "candidate_excluded": true,
+        "constraints": [
+          -2
+        ],
+        "distance_to_sink": 18466,
+        "excluded_subproblems": [],
+        "integer_scale": 30110,
+        "minimum_score": "0",
+        "objective": [
+          86,
+          173,
+          215
+        ],
+        "selected_forbidden_edge": null,
+        "type": "layered_dag_integer_potentials"
+      }
+    ],
+    "parameters": {
+      "budget": "117/30110",
+      "multipliers": [
+        "117/30110"
+      ],
+      "weights": [
+        "10624/15055",
+        "4431/15055",
+        "0"
+      ]
+    },
+    "retained_rows": 5,
+    "status": "CERTIFIED_MINIMUM_BUDGET"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

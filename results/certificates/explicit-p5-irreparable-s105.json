@@ -1,0 +1,64 @@
+{
+  "case_id": "explicit-p5-irreparable-s105",
+  "classification": "irreparable",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:7e0358bf914ec950acd04adf943f786919a44d73705e2d17fa5653b4c902c3f9",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "challenger_ids": [
+      "core0",
+      "core1",
+      "core3",
+      "core4",
+      "core2"
+    ],
+    "oracle_calls": 5,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 9,
+        "minimum": "-9/175",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-2/13",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 9,
+        "minimum": "-1/6",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "retained_rows": 5,
+    "status": "IRREPARABLE_DOMAIN",
+    "stress_witness": {
+      "challenger_ids": [
+        "core0",
+        "core1",
+        "core3",
+        "core4",
+        "core2"
+      ],
+      "coefficients": [
+        "6/31",
+        "6/31",
+        "13/62",
+        "13/62",
+        "6/31"
+      ],
+      "depth": "1/31"
+    }
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}

@@ -1,0 +1,76 @@
+{
+  "case_id": "explicit-p3-repairable-s101",
+  "classification": "repairable",
+  "family": "explicit_controlled",
+  "instance_digest": "sha256:343f628dfae01cfa2cc4c3baaa48b734fa8992a6b39b5b730dd7ced3db569d03",
+  "protocol_sha256": "d7e0a1351722e8bc41a9ac64617b455bad30125c016ed52916c95804ba065aaa",
+  "result": {
+    "budget": "1/5",
+    "challenger_ids": [
+      "core1",
+      "core2",
+      "core0"
+    ],
+    "margin": "0",
+    "master_certificate": {
+      "active_rows": [
+        0,
+        1,
+        2
+      ],
+      "equality_multipliers": [
+        "-1/5"
+      ],
+      "inequality_multipliers": [
+        "6/5",
+        "7/5",
+        "7/5"
+      ],
+      "objective": "1/5",
+      "point": [
+        "7/20",
+        "3/10",
+        "7/20",
+        "1/5"
+      ],
+      "status": "OPTIMAL"
+    },
+    "oracle_calls": 4,
+    "oracle_proofs": [
+      {
+        "challengers_checked": 7,
+        "minimum": "-1/18",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "-1/7",
+        "type": "explicit_enumeration"
+      },
+      {
+        "challengers_checked": 7,
+        "minimum": "0",
+        "type": "explicit_enumeration"
+      }
+    ],
+    "parameters": {
+      "budget": "1/5",
+      "multipliers": [
+        "1/5"
+      ],
+      "weights": [
+        "7/20",
+        "3/10",
+        "7/20"
+      ]
+    },
+    "retained_rows": 3,
+    "status": "CERTIFIED_MINIMUM_BUDGET"
+  },
+  "schema": "mmor-minimum-budget-certificate-1.0"
+}
