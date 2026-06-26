@@ -1,0 +1,31 @@
+{
+  "title": "Verification-domain certificate profiles for finite multi-objective optimisation",
+  "description": "Exact rational verification-domain profiles, minimum-budget certificates, structured separation oracles, exact augmented-Chebyshev intervals and retained computational evidence for positive scalarisation certificates in finite multi-objective optimisation. Version 2.0.0 is a major reconstruction of the earlier diagnostic companion software. Source code is licensed under BSD-3-Clause. Retained instances, proof objects, results, figures and prose documentation are licensed under CC BY 4.0. Independent physical-machine replication is not claimed by this archive; exact classifications and proof-object replay are validated by the included scripts.",
+  "creators": [
+    {
+      "name": "Clim, Antonio",
+      "orcid": "0000-0003-4745-0431",
+      "affiliation": "Bucharest University of Economic Studies"
+    }
+  ],
+  "version": "2.0.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "bsd-3-clause",
+  "language": "eng",
+  "keywords": [
+    "multi-objective optimisation",
+    "verification domains",
+    "scalarisation certificates",
+    "Lagrangian relaxation",
+    "exact verification",
+    "reproducible optimisation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/antonioclim/cert-pareto/releases/tag/v2.0.0",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    }
+  ]
+}
