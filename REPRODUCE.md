@@ -1,6 +1,8 @@
 # Reproduction guide
 
-Release version: `2.0.1`. After the public archive has been minted, insert the exact Zenodo version DOI into `CITATION.cff`, `codemeta.json` and this guide with `python scripts/finalise_release_doi.py --doi <Zenodo version DOI>`.
+Release version: `2.0.1`.
+
+Archived version DOI: https://doi.org/10.5281/zenodo.21011691
 
 
 ## Release validation

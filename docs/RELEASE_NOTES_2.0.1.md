@@ -23,6 +23,6 @@ Version 2.0.1 is a post-deposit archival correction release for the verification
 
 This release is archival hygiene, not a new scientific experiment. Timing values remain descriptive and environment-dependent; exact classifications, budgets, profile values and proof-object replay remain the normative evidence.
 
-## Post-deposit metadata finalisation
+## Archived DOI
 
-After Zenodo assigns the exact version DOI, run `python scripts/finalise_release_doi.py --doi <version-doi> --date-released YYYY-MM-DD` and then `python scripts/run_release_validation.py --expected-doi <version-doi> --fast`.
+Archived version DOI: https://doi.org/10.5281/zenodo.21011691

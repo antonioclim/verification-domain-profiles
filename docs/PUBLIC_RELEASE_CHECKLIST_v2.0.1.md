@@ -22,8 +22,8 @@ This checklist is normative for the MMOR resubmission artefact.
 ## Post-Zenodo DOI finalisation
 
 - [ ] Record the exact Zenodo version DOI, not only the concept DOI.
-- [ ] Run `python scripts/finalise_release_doi.py --doi <version-doi> --date-released YYYY-MM-DD`.
-- [ ] Run `python scripts/run_release_validation.py --expected-doi <version-doi> --fast`.
+- [ ] Run `python scripts/finalise_release_doi.py --doi 10.5281/zenodo.21011691 --date-released 2026-06-28`.
+- [ ] Run `python scripts/run_release_validation.py --expected-doi 10.5281/zenodo.21011691 --fast`.
 - [ ] Confirm `validation/postdeposit_doi.json` exists and matches the DOI.
 - [ ] Update the GitHub release body so the displayed DOI is the same version DOI.
 - [ ] Use the same DOI in the manuscript Data availability, Code availability and references.

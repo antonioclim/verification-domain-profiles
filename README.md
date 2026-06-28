@@ -102,3 +102,7 @@ the certificate weight and finite grids are prohibited as ground truth.
 Source code is licensed under BSD-3-Clause. Retained instances, proof objects,
 results, figures and prose documentation are licensed under CC BY 4.0. See
 `LICENSE`, `LICENSE-DATA.md` and `NOTICE`.
+
+## Archived DOI
+
+Archived version DOI: https://doi.org/10.5281/zenodo.21011691

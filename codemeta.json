@@ -16,12 +16,17 @@
   ],
   "codeRepository": "https://github.com/antonioclim/verification-domain-profiles",
   "description": "Exact verification-domain profiles and positive scalarisation certificates for finite multi-objective optimisation.",
+  "identifier": "https://doi.org/10.5281/zenodo.21011691",
   "isAccessibleForFree": true,
   "issueTracker": "https://github.com/antonioclim/verification-domain-profiles/issues",
   "license": "https://spdx.org/licenses/BSD-3-Clause.html",
   "name": "Verification-domain Certificate Profiles",
   "programmingLanguage": "Python",
   "runtimePlatform": "Python >=3.11",
+  "sameAs": [
+    "https://doi.org/10.5281/zenodo.21011691",
+    "https://github.com/antonioclim/verification-domain-profiles/releases/tag/v2.0.1"
+  ],
   "softwareHelp": "https://github.com/antonioclim/verification-domain-profiles/blob/main/REPRODUCE.md",
   "version": "2.0.1"
 }
