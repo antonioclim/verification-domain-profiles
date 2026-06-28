@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mmor-verification-profiles"
-version = "2.0.0"
+version = "2.0.1"
 description = "Exact verification-domain profiles and positive scalarisation certificates"
 requires-python = ">=3.11"
 authors = [{name = "Antonio Clim"}]
@@ -25,6 +25,6 @@ validation = [
 where = ["src"]
 
 [project.urls]
-Homepage = "https://github.com/antonioclim/cert-pareto"
-Repository = "https://github.com/antonioclim/cert-pareto"
-Issues = "https://github.com/antonioclim/cert-pareto/issues"
+Homepage = "https://github.com/antonioclim/verification-domain-profiles"
+Repository = "https://github.com/antonioclim/verification-domain-profiles"
+Issues = "https://github.com/antonioclim/verification-domain-profiles/issues"

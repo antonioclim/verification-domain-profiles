@@ -1,7 +1,5 @@
 # Verification-domain certificate profiles
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20915545.svg)](https://doi.org/10.5281/zenodo.20915545)
-
 This repository provides the validated computational implementation of a theory of
 positive scalarisation certificates over finite verification domains. For a
 selected feasible candidate, the central profile is
@@ -26,7 +24,7 @@ and a standard-library standalone checker.
 
 ## Status
 
-Version `2.0.0` is the first stable release of the verification-domain profile framework. The retained exact evidence and the public source tree pass the included release validation. A cross-platform GitHub Actions workflow is supplied for hosted execution after the repository update. Independent physical-machine replication is encouraged but is not claimed as completed by this archive.
+Version `2.0.1` is the citable post-deposit archival release for the verification-domain profile framework. It preserves the scientific case grid and retained exact evidence of version 2.0.0, while correcting release identifiers, repository metadata and post-deposit validation. The retained exact evidence and the source tree are validated by the included scripts; the GitHub Actions workflow repeats the checks after each push. For manuscript citation, use this release only after the public v2.0.1 GitHub Actions run is green and the Zenodo version DOI has been recorded consistently. Independent physical-machine replication is encouraged and should be recorded using `docs/INDEPENDENT_REPLICATION.md`.
 
 No universal runtime superiority is claimed. On the retained small correctness cases the full-domain baseline is sometimes faster. On eight larger enumerated scaling cases the numerical full-domain LP was between 3.30 and 30.50 times slower than structured row generation, with a median factor of 7.10. The numerical LP is a timing baseline only; exact row-generation replay is the source of truth.
 

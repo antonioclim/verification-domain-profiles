@@ -1,27 +1,27 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "Verification-domain Certificate Profiles",
-  "description": "Exact verification-domain profiles and positive scalarisation certificates for finite multi-objective optimisation.",
-  "version": "2.0.0",
+  "applicationCategory": "Scientific software",
   "author": [
     {
       "@type": "Person",
-      "givenName": "Antonio",
-      "familyName": "Clim",
-      "identifier": "https://orcid.org/0000-0003-4745-0431",
       "affiliation": {
         "@type": "Organization",
         "name": "Bucharest University of Economic Studies"
-      }
+      },
+      "familyName": "Clim",
+      "givenName": "Antonio",
+      "identifier": "https://orcid.org/0000-0003-4745-0431"
     }
   ],
+  "codeRepository": "https://github.com/antonioclim/verification-domain-profiles",
+  "description": "Exact verification-domain profiles and positive scalarisation certificates for finite multi-objective optimisation.",
+  "isAccessibleForFree": true,
+  "issueTracker": "https://github.com/antonioclim/verification-domain-profiles/issues",
   "license": "https://spdx.org/licenses/BSD-3-Clause.html",
+  "name": "Verification-domain Certificate Profiles",
   "programmingLanguage": "Python",
   "runtimePlatform": "Python >=3.11",
-  "applicationCategory": "Scientific software",
-  "isAccessibleForFree": true,
-  "codeRepository": "https://github.com/antonioclim/cert-pareto",
-  "issueTracker": "https://github.com/antonioclim/cert-pareto/issues",
-  "softwareHelp": "https://github.com/antonioclim/cert-pareto/blob/main/REPRODUCE.md"
+  "softwareHelp": "https://github.com/antonioclim/verification-domain-profiles/blob/main/REPRODUCE.md",
+  "version": "2.0.1"
 }

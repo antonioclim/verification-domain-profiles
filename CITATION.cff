@@ -7,7 +7,7 @@ authors:
     given-names: Antonio
     orcid: "https://orcid.org/0000-0003-4745-0431"
     affiliation: "Bucharest University of Economic Studies"
-version: 2.0.0
+version: 2.0.1
 license: BSD-3-Clause
 abstract: >-
   Exact rational verification-domain profiles, minimum-budget certificates,
@@ -20,7 +20,4 @@ keywords:
   - parametric linear programming
   - exact verification
   - reproducible optimisation
-repository-code: "https://github.com/antonioclim/cert-pareto"
-doi: "10.5281/zenodo.20915545"
-url: "https://doi.org/10.5281/zenodo.20915545"
-date-released: "2026-06-24"
+repository-code: "https://github.com/antonioclim/verification-domain-profiles"

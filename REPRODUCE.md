@@ -1,9 +1,13 @@
 # Reproduction guide
 
-## Fast exact validation
+Release version: `2.0.1`. After the public archive has been minted, insert the exact Zenodo version DOI into `CITATION.cff`, `codemeta.json` and this guide with `python scripts/finalise_release_doi.py --doi <Zenodo version DOI>`.
+
+
+## Release validation
 
 ```bash
 python -m pip install -e ".[validation]"
+python scripts/run_release_validation.py --fast
 python scripts/run_release_validation.py
 ```
 
