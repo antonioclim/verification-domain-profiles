@@ -2,7 +2,10 @@ name: continuous-integration
 
 on:
   push:
+    branches: [main]
+    tags: ["v*"]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-24.04, windows-2022, macos-15]
         python-version: ["3.11", "3.12", "3.13"]
     runs-on: ${{ matrix.os }}
     steps:
@@ -24,19 +27,33 @@ jobs:
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements-validation.txt
       - run: python -m pip install --no-deps -e .
+      - run: python -m pip check
       - run: python -m compileall -q src checker scripts tests
       - run: python -m unittest discover -s tests -v
       - run: python scripts/run_release_validation.py --fast
 
   retained-evidence:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.13"
+          python-version: "3.12"
           cache: pip
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements-validation.txt
       - run: python -m pip install --no-deps -e .
+      - run: python -m pip check
       - run: python scripts/run_release_validation.py
+
+  packaging:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install --no-deps -e .
+      - run: python scripts/run_wheel_smoke.py
