@@ -1,6 +1,6 @@
 {
-  "bytes_scanned": 5560833,
-  "files_scanned": 531,
+  "bytes_scanned": 5580289,
+  "files_scanned": 535,
   "finding_count": 0,
   "findings": [],
   "schema": "mmor-public-distribution-validation-1.0",

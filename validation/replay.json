@@ -1,14 +1,14 @@
 {
-  "certificates": 84,
+  "certificates": 12,
   "classification_counts": {
-    "harmless": 28,
-    "irreparable": 28,
-    "repairable": 28
+    "harmless": 3,
+    "irreparable": 5,
+    "repairable": 4
   },
   "failures": [],
-  "mode": "complete",
+  "mode": "fast",
   "process_boundary_cases": 4,
-  "profiles": 196,
+  "profiles": 12,
   "schema": "mmor-standalone-replay-1.0",
   "status": "PASS"
 }

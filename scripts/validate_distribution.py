@@ -31,7 +31,8 @@ def scan(root: Path) -> dict[str, Any]:
     files = 0
     bytes_scanned = 0
     for path in sorted(root.rglob("*")):
-        if any(part in SKIP for part in path.parts):
+        relative_parts = path.relative_to(root).parts
+        if any(part in SKIP for part in relative_parts):
             continue
         if path.is_dir():
             if path.name.endswith(".egg-info"):

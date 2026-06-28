@@ -7,16 +7,18 @@
     "replay": "PASS",
     "retained_evidence": "PASS",
     "schemas": "PASS",
-    "tests": "PASS",
-    "wheel": "PASS"
+    "tests": "PASS"
   },
+  "doi_policy": "predeposit-or-consistent-version-doi",
+  "expected_doi": null,
   "external_boundaries": {
-    "hosted_cross_platform_ci": "CONFIGURED_NOT_ARCHIVED",
+    "hosted_cross_platform_ci": "PUBLIC_CI_REQUIRED_FOR_SUBMISSION",
     "independent_physical_machine": "NOT_CLAIMED",
     "priority_search": "TARGETED_SEARCH_COMPLETED_NOT_EXHAUSTIVE"
   },
-  "mode": "complete",
+  "mode": "fast",
+  "retained_evidence_version": "2.0.0",
   "schema": "mmor-release-validation-1.0",
-  "software_version": "2.0.0",
+  "software_version": "2.0.1",
   "status": "PASS"
 }

@@ -10,6 +10,10 @@
       "date": "2026-06-25",
       "description": "The release version was promoted from 2.0.0rc2 to 2.0.0 and the already implemented scale policy was documented explicitly. No case, seed, algorithm, baseline, metric or pass criterion changed.",
       "scope": "release_metadata_and_scale_semantics"
+    },
+    {
+      "description": "Post-deposit archival correction. Repository identifiers, Zenodo relation metadata and release-validation policy were corrected. The scientific case grid, candidate selection rules, algorithms, baselines, metrics and pass criteria are unchanged.",
+      "version": "2.0.1"
     }
   ],
   "baselines": [
@@ -296,7 +300,7 @@
     ]
   },
   "schema": "mmor-verification-profile-study-1.0",
-  "software_version": "2.0.0",
+  "software_version": "2.0.1",
   "timing": {
     "cases": [
       "explicit-p2-repairable-s101",

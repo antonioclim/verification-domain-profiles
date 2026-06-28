@@ -10,6 +10,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -26,7 +27,11 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 from mmor_certificates import __version__
 
-VERSION = "2.0.0"
+VERSION = "2.0.1"
+RETAINED_EVIDENCE_VERSION = "2.0.0"
+REPOSITORY_URL = "https://github.com/antonioclim/verification-domain-profiles"
+GITHUB_TAG_URL = f"{REPOSITORY_URL}/releases/tag/v{VERSION}"
+PREVIOUS_ARTIFACT_DOI = "10.5281/zenodo.20647755"
 VALIDATION = ROOT / "validation"
 PROTOCOL = ROOT / "protocol" / "COMPUTATIONAL_PROTOCOL.json"
 PROTOCOL_SHA256 = hashlib.sha256(PROTOCOL.read_bytes()).hexdigest()
@@ -64,12 +69,101 @@ def load_checker():
     return module
 
 
-def metadata_validation() -> dict[str, Any]:
+def re_compile_release_doi() -> re.Pattern[str]:
+    return re.compile(r"10\.5281/zenodo\.\d+")
+
+
+def normalise_doi(value: Any) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if text.startswith("https://doi.org/"):
+        text = text.removeprefix("https://doi.org/")
+    return text or None
+
+
+def metadata_validation(expected_doi: str | None = None) -> dict[str, Any]:
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     citation = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
     zenodo = load_json(ROOT / ".zenodo.json")
     codemeta = load_json(ROOT / "codemeta.json")
     protocol = load_json(PROTOCOL)
+    doi_pattern = re_compile_release_doi()
+
+    expected_doi = normalise_doi(expected_doi)
+    citation_doi = normalise_doi(citation.get("doi"))
+    citation_url = citation.get("url")
+    same_as = codemeta.get("sameAs", [])
+    if isinstance(same_as, str):
+        same_as = [same_as]
+
+    public_predeposit_text = "\n".join([
+        (ROOT / "CITATION.cff").read_text(encoding="utf-8"),
+        json.dumps(codemeta, sort_keys=True),
+        (ROOT / "README.md").read_text(encoding="utf-8"),
+        (ROOT / "REPRODUCE.md").read_text(encoding="utf-8"),
+        (ROOT / "docs/RELEASE_NOTES_2.0.1.md").read_text(encoding="utf-8"),
+    ])
+    postdeposit_record_path = VALIDATION / "postdeposit_doi.json"
+    postdeposit_ok = True
+
+    if citation_doi is None:
+        # Pre-deposit state: there must be no stray Zenodo release DOI in user-facing
+        # citation/prose/codemeta files. The earlier related artefact DOI may appear
+        # in .zenodo.json and is intentionally not part of this scan.
+        release_identifier_policy = expected_doi is None and "10.5281/zenodo." not in public_predeposit_text
+        release_identifier_state = "PREDEPOSIT_NO_RELEASE_DOI" if release_identifier_policy else "PREDEPOSIT_INCONSISTENT"
+        expected_doi_ok = expected_doi is None
+    else:
+        doi_url = f"https://doi.org/{citation_doi}"
+        postdeposit_ok = False
+        if postdeposit_record_path.exists():
+            try:
+                postdeposit = load_json(postdeposit_record_path)
+                postdeposit_ok = (
+                    postdeposit.get("software_version") == VERSION
+                    and postdeposit.get("version_doi") == citation_doi
+                    and postdeposit.get("version_doi_url") == doi_url
+                    and postdeposit.get("github_release") == GITHUB_TAG_URL
+                )
+            except Exception:
+                postdeposit_ok = False
+        expected_doi_ok = expected_doi is None or citation_doi == expected_doi
+        release_identifier_policy = (
+            bool(doi_pattern.fullmatch(citation_doi))
+            and citation_url == doi_url
+            and codemeta.get("identifier") == doi_url
+            and doi_url in same_as
+            and doi_url in (ROOT / "README.md").read_text(encoding="utf-8")
+            and doi_url in (ROOT / "REPRODUCE.md").read_text(encoding="utf-8")
+            and doi_url in (ROOT / "docs/RELEASE_NOTES_2.0.1.md").read_text(encoding="utf-8")
+            and expected_doi_ok
+            and postdeposit_ok
+        )
+        release_identifier_state = "POSTDEPOSIT_CONSISTENT" if release_identifier_policy else "POSTDEPOSIT_INCONSISTENT"
+
+    related = zenodo.get("related_identifiers", [])
+    github_relation_ok = any(
+        item.get("identifier") == GITHUB_TAG_URL and item.get("relation") == "isIdenticalTo"
+        for item in related
+    )
+    previous_not_identical = all(
+        not (
+            str(item.get("identifier")) == PREVIOUS_ARTIFACT_DOI
+            and str(item.get("relation", "")).lower() == "isidenticalto"
+        )
+        for item in related
+    )
+    project_urls = project["project"].get("urls", {})
+    repository_consistency = (
+        citation.get("repository-code") == REPOSITORY_URL
+        and codemeta.get("codeRepository") == REPOSITORY_URL
+        and codemeta.get("issueTracker") == REPOSITORY_URL + "/issues"
+        and codemeta.get("softwareHelp") == REPOSITORY_URL + "/blob/main/REPRODUCE.md"
+        and project_urls.get("Homepage") == REPOSITORY_URL
+        and project_urls.get("Repository") == REPOSITORY_URL
+        and project_urls.get("Issues") == REPOSITORY_URL + "/issues"
+    )
     checks = {
         "package_version": project["project"]["version"] == VERSION,
         "runtime_version": __version__ == VERSION,
@@ -79,12 +173,24 @@ def metadata_validation() -> dict[str, Any]:
         "protocol_version": protocol["software_version"] == VERSION,
         "protocol_digest": (ROOT / "protocol/COMPUTATIONAL_PROTOCOL.sha256").read_text(encoding="utf-8").strip() == PROTOCOL_SHA256,
         "source_licence": project["project"]["license"]["text"] == citation["license"] == "BSD-3-Clause" and zenodo["license"] == "bsd-3-clause",
-        "release_identifier_absent": "doi" not in citation and "doi" not in zenodo,
+        "repository_consistency": repository_consistency,
+        "github_release_relation": github_relation_ok,
+        "previous_artifact_not_identical": previous_not_identical,
+        "release_identifier_policy": release_identifier_policy,
+        "expected_release_doi": expected_doi_ok,
+        "postdeposit_record": citation_doi is None or postdeposit_ok,
         "email_absent": "@" not in json.dumps({"project": project["project"].get("authors"), "citation": citation["authors"], "zenodo": zenodo["creators"]}),
     }
     failures = sorted(name for name, passed in checks.items() if not passed)
-    return {"schema": "mmor-metadata-validation-1.0", "checks": checks, "failures": failures, "status": "PASS" if not failures else "FAIL"}
-
+    return {
+        "schema": "mmor-metadata-validation-1.2",
+        "checks": checks,
+        "release_identifier_state": release_identifier_state,
+        "expected_doi": expected_doi,
+        "citation_doi": citation_doi,
+        "failures": failures,
+        "status": "PASS" if not failures else "FAIL",
+    }
 
 def schema_validation() -> dict[str, Any]:
     schemas = {
@@ -307,7 +413,7 @@ def wheel_smoke_test() -> dict[str, Any]:
             with zipfile.ZipFile(wheels[0]) as archive:
                 metadata_name = next(name for name in archive.namelist() if name.endswith(".dist-info/METADATA"))
                 metadata = archive.read(metadata_name).decode("utf-8")
-                if "Version: 2.0.0" not in metadata:
+                if f"Version: {VERSION}" not in metadata:
                     failures.append("wheel metadata version mismatch")
                 if "@" in metadata:
                     failures.append("wheel metadata contains contact address")
@@ -326,9 +432,12 @@ def write_manifest() -> dict[str, Any]:
     excluded = {"FILE_MANIFEST.sha256", "manifest_summary.json"}
     lines: list[str] = []
     for path in sorted(ROOT.rglob("*")):
-        if not path.is_file() or any(part in {".git", ".venv", "venv", "__pycache__", "build", "dist"} for part in path.parts) or path.name in excluded:
+        if not path.is_file():
             continue
-        lines.append(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.relative_to(ROOT).as_posix()}")
+        relative = path.relative_to(ROOT)
+        if any(part in {".git", ".venv", "venv", "__pycache__", "build", "dist"} for part in relative.parts) or path.name in excluded:
+            continue
+        lines.append(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {relative.as_posix()}")
     manifest = VALIDATION / "FILE_MANIFEST.sha256"
     manifest.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return {"schema": "mmor-file-manifest-summary-1.0", "files": len(lines), "manifest_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest(), "status": "PASS"}
@@ -337,35 +446,45 @@ def write_manifest() -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--fast", action="store_true")
+    parser.add_argument("--expected-doi", default=None, help="Expected Zenodo version DOI, e.g. 10.5281/zenodo.12345678")
+    parser.add_argument("--with-wheel", action="store_true", help="Also run the packaging wheel smoke test")
     args = parser.parse_args()
     VALIDATION.mkdir(parents=True, exist_ok=True)
     remove_transient()
     results = {
-        "metadata": metadata_validation(),
+        "metadata": metadata_validation(args.expected_doi),
         "schemas": schema_validation(),
+    }
+    if args.with_wheel:
+        # Run the packaging smoke test before the proof-object replay,
+        # so low-memory CI runners do not carry replay state into pip wheel.
+        results["wheel"] = wheel_smoke_test()
+    results.update({
         "replay": checker_replay(args.fast),
         "mutations": mutation_validation(),
         "tests": unit_tests(),
         "checker_imports": import_boundary(),
         "retained_evidence": retained_summary(),
         "distribution": distribution_validation(),
-    }
-    if not args.fast:
-        results["wheel"] = wheel_smoke_test()
+    })
     for name, payload in results.items():
         write_json(VALIDATION / f"{name}.json", payload)
     remove_transient()
     # Scan again after all validation summaries have been written.
     results["distribution"] = distribution_validation()
     write_json(VALIDATION / "distribution.json", results["distribution"])
+    remove_transient()
     statuses = {name: payload["status"] for name, payload in results.items()}
     validation_record = {
         "schema": "mmor-release-validation-1.0",
         "software_version": VERSION,
+        "retained_evidence_version": RETAINED_EVIDENCE_VERSION,
+        "doi_policy": "predeposit-or-consistent-version-doi",
+        "expected_doi": args.expected_doi,
         "mode": "fast" if args.fast else "complete",
         "components": statuses,
         "external_boundaries": {
-            "hosted_cross_platform_ci": "CONFIGURED_NOT_ARCHIVED",
+            "hosted_cross_platform_ci": "PUBLIC_CI_REQUIRED_FOR_SUBMISSION",
             "independent_physical_machine": "NOT_CLAIMED",
             "priority_search": "TARGETED_SEARCH_COMPLETED_NOT_EXHAUSTIVE"
         },
