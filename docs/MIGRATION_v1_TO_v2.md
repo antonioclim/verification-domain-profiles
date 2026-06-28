@@ -16,4 +16,4 @@ All retained instances, profile records, minimum-budget certificates, raw result
 
 ## Archival rule
 
-Keep version 1.0.0 tags and archival records unchanged for provenance. Cite the exact version used. New work based on verification-domain profiles should use version 2.0.0 or later.
+Keep version 1.0.0 tags and archival records unchanged for provenance. Cite the exact version used. New work based on verification-domain profiles should use version 2.0.1 or later.

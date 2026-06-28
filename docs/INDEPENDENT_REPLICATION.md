@@ -1,5 +1,8 @@
 # Independent replication protocol
 
+Release version: `2.0.1`. This document specifies how an independent replication log should be produced. A release should not claim independent physical-machine replication unless such a log has been created and archived.
+
+
 ## Objective
 
 Reproduce the exact classifications, minimum budgets, fixed-budget profile values and proof-object replay in an environment not used to create the archive. Timing values are descriptive and need not be byte-identical.

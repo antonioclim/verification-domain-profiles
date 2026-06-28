@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.1
+
+- corrected repository identifiers from the former companion repository name to `verification-domain-profiles`
+- replaced the pre-deposit DOI absence check by a two-state release-identifier policy
+- aligned Zenodo relation metadata so that the earlier artefact is referenced but not declared identical
+- updated package, protocol, validation and citation metadata to version 2.0.1
+- added a finalisation script for inserting the Zenodo version DOI after publication
+- preserved the scientific protocol, case grid, proof objects and retained exact evidence
+
+
 ## 2.0.0
 
 - introduced scale-normalised verification-domain certificate profiles

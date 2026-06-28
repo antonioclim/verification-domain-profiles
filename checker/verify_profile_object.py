@@ -394,7 +394,7 @@ def main() -> int:
             report = verify_profile(instance, payload)
         else:
             reject("OBJECT_SCHEMA", str(payload.get("schema")))
-        report["checker"] = {"name": "mmor-profile-standalone-checker", "version": "2.0.0"}
+        report["checker"] = {"name": "mmor-profile-standalone-checker", "version": "2.0.1"}
         print(json.dumps(report, indent=2, sort_keys=True))
         return 0
     except Rejected as exc:
